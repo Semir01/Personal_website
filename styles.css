@@ -1,0 +1,77 @@
+/* ====== MAIN SETINGS ===== */
+@font-face {
+    font-family: AllText;
+    src: url("./fonts/Rosario-Regular.ttf");
+}
+@font-face {
+    font-family: TitelText;
+    src: url("./fonts/OleoScript-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ====== Home page CSS setings ===== */
+.container{
+    background-color: #FFFFFF;
+    width: 393px;
+    height: 100%;
+    display: flex;
+}
+.text-background{
+    background-color: #BCBD8B;
+    border-top: 10px solid #717744;
+    border-bottom: 10px solid  #717744;
+    width: 100%;
+    height: 617px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+.text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+
+
+
+
+
+
+/* ====== Menu page CSS setings ===== */
+.menu-icon{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.menu-icon .box{
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: #4B652D;
+}
+.menu-icon .cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu-icon .cover:hover{
+    cursor: pointer;
+    background-color: #ffffff21;
+}
+.top-boxs, .bottom-boxs{
+    width: 100%;
+    display: flex;
+    gap: 2px;
+}
