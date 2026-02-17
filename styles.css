@@ -3,33 +3,38 @@
     font-family: AllText;
     src: url("./fonts/Rosario-Regular.ttf");
 }
+
 @font-face {
     font-family: TitelText;
     src: url("./fonts/OleoScript-Regular.ttf");
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* _______________________________________ PAGES SETTINGS _______________________________________ */
 /* ====== Home page CSS setings ===== */
-.container{
+.container {
     background-color: #FFFFFF;
-    width: 393px;
-    height: 100%;
+    width: 100%;
+    height: auto;
     display: flex;
 }
-.text-background{
+
+.text-background {
     background-color: #BCBD8B;
     border-top: 10px solid #717744;
-    border-bottom: 10px solid  #717744;
+    border-bottom: 10px solid #717744;
     width: 100%;
     height: 617px;
     border-top-left-radius: 200px;
     border-bottom-right-radius: 200px;
 }
-.text-content{
+
+.text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,13 +42,9 @@
     height: 100%;
 }
 
-
-
-
-
-
-/* ====== Menu page CSS setings ===== */
-.menu-icon{
+/* _______________________________________ Menu and Others SETTINGS _______________________________________ */
+/* ====== Menu CSS setings ===== */
+.menu-icon {
     width: 22px;
     height: 22px;
     display: flex;
@@ -53,25 +54,161 @@
     top: 15px;
     left: 15px;
 }
-.menu-icon .box{
+
+.menu-icon .box {
     width: 10px;
     height: 10px;
     border-radius: 2px;
     background-color: #4B652D;
 }
-.menu-icon .cover{
+
+.menu-icon .cover {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
-.menu-icon .cover:hover{
+
+.menu-icon .cover:hover {
     cursor: pointer;
-    background-color: #ffffff21;
+    background-color: #ffffff30;
 }
-.top-boxs, .bottom-boxs{
+
+.top-boxs,
+.bottom-boxs {
     width: 100%;
     display: flex;
     gap: 2px;
+}
+
+
+.overlayer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #ffffff30;
+    z-index: 0;
+}
+
+.menu-container {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #717744;
+    z-index: 1;
+    box-shadow: 8px 6px 15px #464545;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title,
+.contacts-title {
+    font-size: 32px;
+    font-family: TitelText;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 1px solid #FFFFFF;
+    margin-top: 30px;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 50px;
+}
+
+.menu-item,
+.contact-item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #BCBD8B;
+    border-radius: 8px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    background-color: #E9EDC9;
+}
+
+.menu-item a {
+    font-size: 20px;
+    font-family: AllText;
+    font-weight: bold;
+    color: #582F0E;
+    text-decoration: none;
+}
+
+.contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.icons-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.cover-icones {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 39px;
+    gap: 10px;
+    background-color: #4B652D;
+    height: 351px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.cover-icones img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-list {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 60px;
+}
+
+.contact-item {
+    border-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    gap: 20px;
+    padding-left: 0px;
+    padding: 5px;
+    text-align: end;
+}
+
+.contact-item:hover {
+    cursor: pointer;
+    background-color: #E9EDC9;
+}
+
+.contact-item a {
+    font-size: 14px;
+    font-family: AllText;
+    font-weight: bold;
+    font-style: italic;
+    color: #582F0E;
+    text-decoration: none;
+    align-items: end;
+    width: 100%;
 }
