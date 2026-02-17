@@ -44,7 +44,7 @@
 
 /* _______________________________________ Menu and Others SETTINGS _______________________________________ */
 /* ====== Menu CSS setings ===== */
-.menu-icon {
+.menu-icon{
     width: 22px;
     height: 22px;
     display: flex;
@@ -54,7 +54,6 @@
     top: 15px;
     left: 15px;
 }
-
 .menu-icon .box {
     width: 10px;
     height: 10px;
@@ -72,7 +71,6 @@
 
 .menu-icon .cover:hover {
     cursor: pointer;
-    background-color: #ffffff30;
 }
 
 .top-boxs,
@@ -84,11 +82,17 @@
 
 
 .overlayer {
-    width: 100%;
-    height: 100%;
     position: fixed;
-    background-color: #ffffff30;
-    z-index: 0;
+    inset: 0;
+    background: #BCBD8B90;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.overlayer.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .menu-container {
@@ -103,6 +107,13 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+
+    transform: translateX(-105%);
+    transition: transform 0.5s ease;
+}
+
+.menu-container.active{
+    transform: translateX(0);
 }
 
 .menu-title,
