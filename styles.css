@@ -97,7 +97,7 @@
 
 .menu-container {
     width: 250px;
-    height: 100%;
+    height: 852px;
     position: absolute;
     top: 0;
     left: 0;
@@ -178,7 +178,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 39px;
-    gap: 10px;
+    gap: 12px;
     background-color: #4B652D;
     height: 351px;
     border-top-right-radius: 30px;
@@ -205,7 +205,7 @@
     gap: 20px;
     padding-left: 0px;
     padding: 5px;
-    text-align: end;
+    text-align: center;
 }
 
 .contact-item:hover {
@@ -214,7 +214,7 @@
 }
 
 .contact-item a {
-    font-size: 14px;
+    font-size: 16px;
     font-family: AllText;
     font-weight: bold;
     font-style: italic;
