@@ -22,6 +22,8 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
+    z-index: 0;
 }
 
 .text-background {
@@ -32,19 +34,89 @@
     height: 617px;
     border-top-left-radius: 200px;
     border-bottom-right-radius: 200px;
+    position: absolute;
+    z-index: 1;
+    max-width: 700px;
+    top: 0;
+    left: 0;
 }
 
-.text-content {
+.content-all {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100%;
+    z-index: 2;
+}
+
+.content {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+.title,
+.myName {
+    font-size: 50px;
+    font-family: TitelText;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding: 0;
+}
+
+.myName {
+    font-size: 32px;
+}
+
+.description {
+    font-size: 20px;
+    font-family: AllText;
+    color: #FFFFFF;
+    text-align: end;
+    font-style: italic;
+    margin-top: 40px;
+}
+
+.read-more-button {
+    width: 280px;
+    height: 50px;
+    background-color: #4B652D;
+    color: #FFFFFF;
+    margin-top: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    font-family: AllText;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.read-more-button:hover {
+    cursor: pointer;
+    background-color: #c5ca9f;
+    border: 2px solid #FFFFFF;
+}
+
+.home-image {
+    width: 100%;
+    aspect-ratio: 2/3;   /* ili 4/3 zavisi od slike */
+    margin-top: 40px;
+    background-image: url("./assets/images/Semir_home_image.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px
 }
 
 /* _______________________________________ Menu and Others SETTINGS _______________________________________ */
 /* ====== Menu CSS setings ===== */
-.menu-icon{
+.menu-icon {
     width: 22px;
     height: 22px;
     display: flex;
@@ -53,7 +125,9 @@
     position: absolute;
     top: 15px;
     left: 15px;
+    z-index: 3;
 }
+
 .menu-icon .box {
     width: 10px;
     height: 10px;
@@ -80,7 +154,6 @@
     gap: 2px;
 }
 
-
 .overlayer {
     position: fixed;
     inset: 0;
@@ -93,16 +166,17 @@
 .overlayer.active {
     opacity: 1;
     pointer-events: all;
+    z-index: 3;
 }
 
 .menu-container {
-    width: 250px;
-    height: 100%;
+    width: 270px;
+    height: 852px;
     position: absolute;
     top: 0;
     left: 0;
     background-color: #717744;
-    z-index: 1;
+    z-index: 3;
     box-shadow: 8px 6px 15px #464545;
     padding: 10px;
     display: flex;
@@ -112,7 +186,7 @@
     transition: transform 0.5s ease;
 }
 
-.menu-container.active{
+.menu-container.active {
     transform: translateX(0);
 }
 
@@ -157,6 +231,10 @@
     font-weight: bold;
     color: #582F0E;
     text-decoration: none;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .contacts {
@@ -178,7 +256,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 39px;
-    gap: 10px;
+    gap: 12px;
     background-color: #4B652D;
     height: 351px;
     border-top-right-radius: 30px;
@@ -205,7 +283,7 @@
     gap: 20px;
     padding-left: 0px;
     padding: 5px;
-    text-align: end;
+    text-align: center;
 }
 
 .contact-item:hover {
@@ -215,11 +293,11 @@
 
 .contact-item a {
     font-size: 14px;
-    font-family: AllText;
-    font-weight: bold;
+    font-family: TitelText;
     font-style: italic;
     color: #582F0E;
     text-decoration: none;
     align-items: end;
     width: 100%;
+    letter-spacing: 1px;
 }
