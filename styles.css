@@ -170,7 +170,7 @@
 }
 
 .menu-container {
-    width: 250px;
+    width: 270px;
     height: 852px;
     position: absolute;
     top: 0;
@@ -292,12 +292,12 @@
 }
 
 .contact-item a {
-    font-size: 16px;
-    font-family: AllText;
-    font-weight: bold;
+    font-size: 14px;
+    font-family: TitelText;
     font-style: italic;
     color: #582F0E;
     text-decoration: none;
     align-items: end;
     width: 100%;
+    letter-spacing: 1px;
 }
