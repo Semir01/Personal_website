@@ -106,13 +106,53 @@
 
 .home-image {
     width: 100%;
-    aspect-ratio: 2/3;   /* ili 4/3 zavisi od slike */
+    aspect-ratio: 2/3;  
     margin-top: 40px;
     background-image: url("./assets/images/Semir_home_image.png");
     background-size: cover;
     background-position: center;
     margin-top: 30px
 }
+
+/* ====== About page CSS setings ===== */
+.page-title{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    border-top: 2px solid #BCBD8B;
+    border-bottom: 2px solid #BCBD8B;
+    background-color: #717744;
+}
+.page-title p{
+    font-size: 32px;
+    font-family: TitelText;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.content-image{
+    width: 100%;
+    aspect-ratio: 2/3;
+    background-position: center;
+    background-image: url("./assets/images/AboutMeContentImg.png");
+}
+.img-Me {
+    width: 100%;
+    aspect-ratio: 2/3;  
+    background-image: url("./assets/images/0-02-05-63b4a8f839ce5b5e9d02f52b2be5a4157035ea9178307c5cd73d0f4dd7cfb661_fe6fd92be3b1fc7d-removebg-preview.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 121px;
+}
+.content-about-me{
+    background-color: #BCBD8B;
+    border-top: 3px solid #717744;
+    border-bottom: 3px solid #717744;
+    height: 700px;
+}
+
 
 /* _______________________________________ Menu and Others SETTINGS _______________________________________ */
 /* ====== Menu CSS setings ===== */
