@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error loading menu:", error));
 
-
     // SLIDER
-
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
 
