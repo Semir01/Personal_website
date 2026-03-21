@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error loading menu:", error));
 
-
     // SLIDER
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
 
     let curentSlide = 0;
+
     function showSlide(index) {
         wrapper.style.transform = `translateX(-${index * 100}%)`;
 
@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     indicators.forEach((indicator, i) => {
         indicator.addEventListener('click', () => {
-
             showSlide(i);
         });
     });
