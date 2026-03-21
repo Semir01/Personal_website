@@ -106,7 +106,7 @@
 
 .home-image {
     width: 100%;
-    aspect-ratio: 2/3;   /* ili 4/3 zavisi od slike */
+    aspect-ratio: 2/3;  
     margin-top: 40px;
     background-image: url("./assets/images/Semir_home_image.png");
     background-size: cover;
@@ -114,6 +114,98 @@
     margin-top: 30px
 }
 
+/* ====== About page CSS setings ===== */
+.page-title{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    border-top: 2px solid #BCBD8B;
+    border-bottom: 2px solid #BCBD8B;
+    background-color: #717744;
+}
+.page-title p{
+    font-size: 32px;
+    font-family: TitelText;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.content-image{
+    width: 100%;
+    aspect-ratio: 2/3;
+    background-position: center;
+    background-image: url("./assets/images/AboutMeContentImg.png");
+}
+.img-Me {
+    width: 100%;
+    aspect-ratio: 2/3;  
+    background-image: url("./assets/images/0-02-05-63b4a8f839ce5b5e9d02f52b2be5a4157035ea9178307c5cd73d0f4dd7cfb661_fe6fd92be3b1fc7d-removebg-preview.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 121px;
+    box-shadow: #000000 0px 6px 12px;
+}
+.content-about-me{
+    background-color: #BCBD8B;
+    border-top: 3px solid #717744;
+    border-bottom: 3px solid #717744;
+    height: 100%;
+}
+.slider-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.slide-wrapper{
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 10px;
+    padding: 10px;
+}
+.slides p{
+    font-size: 20px;
+    font-family: AllText;
+    color: #582F0E;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: start;
+}
+.slider-indicator{
+    width: 100%;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.indicator{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 0.5px solid #000000;
+}
+
+.indicator.active {
+    background-color: #4B652D;
+}
 /* _______________________________________ Menu and Others SETTINGS _______________________________________ */
 /* ====== Menu CSS setings ===== */
 .menu-icon {
