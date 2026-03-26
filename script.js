@@ -17,8 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuContainer.classList.remove("active");
                 overlayer.classList.remove("active");
             });
+
+            const links = document.querySelectorAll(".menu-item a");
+            let curentPage = window.location.pathname.split("/").pop();
+
+            if (curentPage === "") {
+                curentPage = "index.html";
+            }
+
+            links.forEach(link => {
+
+                if (link.getAttribute("href") === curentPage) {
+                    console.log("Active link:", link);
+                    link.parentElement.classList.add("active");
+                }
+            });
         })
         .catch(error => console.error("Error loading menu:", error));
+
 
     // SLIDER
     const wrapper = document.querySelector(".slide-wrapper");
