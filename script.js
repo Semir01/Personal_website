@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 overlayer.classList.remove("active");
             });
 
-
             const links = document.querySelectorAll(".menu-item a");
             let curentPage = window.location.pathname.split("/").pop();
 
