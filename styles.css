@@ -387,6 +387,10 @@
     background-color: #E9EDC9;
 }
 
+.menu-item.active {
+    background-color: #E9EDC9;
+}
+
 .menu-item a {
     font-size: 20px;
     font-family: AllText;
