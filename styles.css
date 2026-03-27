@@ -259,8 +259,8 @@
     height: 70px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-left: 15px;
+    gap: 7px;
+    margin-left: 10px;
 }
 
 .card img {
