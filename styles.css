@@ -9,6 +9,11 @@
     src: url("./fonts/OleoScript-Regular.ttf");
 }
 
+@font-face {
+    font-family: DetailText;
+    src: url("./fonts/Prompt-Regular.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -278,7 +283,7 @@
 
 /* ====== Skills page CSS setings ===== */
 
-.background-linear{
+.background-linear {
     width: 100%;
     height: 430px;
     background: linear-gradient(135deg, #BCBD8B, #717744);
@@ -287,7 +292,7 @@
     justify-content: center;
 }
 
-.skill-image{
+.skill-image {
     width: 100%;
     aspect-ratio: 2/2;
     background-image: url("./assets/images/SkillsImage.png");
@@ -295,146 +300,223 @@
     background-position: center;
 }
 
-.skills{
+.skills {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.skill-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    background-color: #E0E2DB;
     gap: 10px;
 }
 
-.skills-section-title{
+.skill-section {
     width: 100%;
-    font-family: AllText;
-    font-size: 30px;
-    color: #582F0E;
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 5px;
-}
-
-.skill-card{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    border-top: 2px solid #BCBD8B;
-    border-bottom: 2px solid #BCBD8B;
-}
-
-.skill-logo{
-    width: 60%;
-    height: 100%;
-   
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-right: 2px solid #BCBD8B;
-    border-bottom-right-radius: 100px;
-}
-
-.html{
-    background-image: url("./assets/icones/html-5.png");
-}
-.css{
-    background-image: url("./assets/icones/css-3.png");
-}
-.js{
-    background-image: url("./assets/icones/js.png");
-}
-.c{
-    background-image: url("./assets/icones/c-sharp.png");
-}
-.sql{
-    background-image: url("./assets/icones/sql-server.png");
-}
-.electric{
-    background-image: url("./assets/icones/engineering.png");
-}
-.arduino{
-    background-image: url("./assets/icones/macos-app-icons-arduino-png-icon.jpg");
-}
-.profiCAD{
-    background-image: url("./assets/icones/profiCAD.png");
-}
-.figma{
-    background-image: url("./assets/icones/figma.png");
-}
-.blender{
-    background-image: url("./assets/icones/blender.jpg");
-}
-
-.status-name{
-    width: 40%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin-right: 5px;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.skill-name, .skill-percentage{
+.skill-section-title {
     font-family: AllText;
-    font-size: 20px;
-    font-weight: lighter;
+    font-size: 22px;
     font-style: italic;
-    margin-bottom: 0px;
     width: 100%;
-    text-align: center;
+    text-align: end;
+    padding-right: 10px;
+}
+
+.skills-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.skill-hex-logo {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.skill-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
 
 .skill-name{
-    border-bottom: 1px solid black;
+    font-family: AllText;
+    font-size: 20px;
     color: #000000;
+    font-weight: bold;
+    font-style: italic;
+    text-align: start;
+    padding-left: 10px;
 }
 
-.skill-percentage{
-    font-weight: bolder;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 22px;
+.skill-progres-bar{
+    width: 100%;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
-.html-percentage{
+.skill-achieved{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+.skill-achieved p{
+    font-family: DetailText;
+    font-size: 16px;
+    color: #000000;
+    align-items: center;
+}
+
+.skill-achieved .presentage{
+    font-size: 26px;
+    font-weight: bold; 
+}
+
+.html-hex {
+    background-image: url("./assets/icones/html-hex.png");
+}
+.css-hex{
+    background-image: url("./assets/icones/css-hex.png");
+}
+.js-hex{
+    background-image: url("./assets/icones/js-hex.png");
+}
+.c-hex{
+    background-image: url("./assets/icones/c-hex.png");
+}
+.sql-hex{
+    background-image: url("./assets/icones/sql-hex.png");
+}
+.figma-hex{
+    background-image: url("./assets/icones/figma-hex.png");
+}
+.blender-hex{
+    background-image: url("./assets/icones/blender-hex.png");
+}
+.arduino-hex{
+    background-image: url("./assets/icones/arduino-hex.png");
+}
+.profiCAD-hex{
+    background-image: url("./assets/icones/profiCAD-hex.png");
+}
+.electric-hex{
+    background-image: url("./assets/icones/electric-hex.png");
+}
+
+.html-progress{
+    width: 70%;
+    height: 100%;
+    background-color: #F35B04;
+    border-radius: 5px;
+}
+.css-progress{
+    width: 40%;
+    height: 100%;
+    background-color: #2196F3;
+    border-radius: 5px;
+}
+.js-progress{
+    width: 30%;
+    height: 100%;
+    background-color: #F0DB4F;
+    border-radius: 5px;
+}
+.c-progress{
+    width: 40%;
+    height: 100%;
+    background-color: #782379;
+    border-radius: 5px;
+}
+.sql-progress{
+    width: 60%;
+    height: 100%;
+    background-color: #00758F;
+    border-radius: 5px;
+}
+.figma-progress{
+    width: 60%;
+    height: 100%;
+    background-color: #00CF7F;
+    border-radius: 5px;
+}
+.blender-progress{
+    width: 30%;
+    height: 100%;
+    background-color: #275787;
+    border-radius: 5px;
+}
+.arduino-progress{
+    width: 20%;
+    height: 100%;
+    background-color: #00979D;
+    border-radius: 5px;
+}
+.profiCAD-progress{
+    width: 50%;
+    height: 100%;
+    background-color: #275787;
+    border-radius: 5px;
+}
+.electric-progress{
+    width: 80%;
+    height: 100%;
+    background-color: #F0A500;
+    border-radius: 5px;
+}
+
+.skill-achieved .html-presentage{
     color: #F35B04;
 }
-.css-percentage{
+.skill-achieved .css-presentage{
     color: #2196F3;
 }
-.js-percentage{
-    color: #FFDF00;
+.skill-achieved .js-presentage{
+    color: #F0DB4F;
 }
-.c-percentage{
-    color: #9B4F96;
+.skill-achieved .c-presentage{
+    color: #782379;
 }
-.sql-percentage{
-    color: #1167AC;
+.skill-achieved .sql-presentage{
+    color: #00758F;
 }
-.electric-percentage{
-    color: #6b6b6b;
+.skill-achieved .figma-presentage{
+    color: #00CF7F;
 }
-.arduino-percentage{
-    color: #009999;
+.skill-achieved .blender-presentage{
+    color: #275787;
 }
-.profiCAD-percentage{
-    color: #5990C5;
+.skill-achieved .arduino-presentage{
+    color: #00979D;
 }
-.figma-percentage{
-    color: #F24E1E;
+.skill-achieved .profiCAD-presentage{
+    color: #275787;
 }
-.blender-percentage{
-    color: #009999;
+.skill-achieved .electric-presentage{
+    color: #F0A500;
 }
+
 /* _______________________________________ Menu and Others SETTINGS _______________________________________ */
 /* ====== Menu CSS setings ===== */
 .menu-icon {
