@@ -348,7 +348,7 @@
     background-position: center;
 }
 
-.skill-info{
+.skill-info {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -356,7 +356,7 @@
     gap: 5px;
 }
 
-.skill-name{
+.skill-name {
     font-family: AllText;
     font-size: 20px;
     color: #000000;
@@ -366,7 +366,7 @@
     padding-left: 10px;
 }
 
-.skill-progres-bar{
+.skill-progres-bar {
     width: 100%;
     height: 10px;
     background-color: #ffffff;
@@ -374,7 +374,7 @@
     margin-top: 5px;
 }
 
-.skill-achieved{
+.skill-achieved {
     width: 100%;
     height: 30px;
     display: flex;
@@ -382,140 +382,343 @@
     gap: 75px;
 }
 
-.skill-achieved p{
+.skill-achieved p {
     font-family: DetailText;
     font-size: 16px;
     color: #000000;
     align-items: center;
 }
 
-.skill-achieved .presentage{
+.skill-achieved .presentage {
     font-size: 26px;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .html-hex {
     background-image: url("./assets/icones/html-hex.png");
 }
-.css-hex{
+
+.css-hex {
     background-image: url("./assets/icones/css-hex.png");
 }
-.js-hex{
+
+.js-hex {
     background-image: url("./assets/icones/js-hex.png");
 }
-.c-hex{
+
+.c-hex {
     background-image: url("./assets/icones/c-hex.png");
 }
-.sql-hex{
+
+.sql-hex {
     background-image: url("./assets/icones/sql-hex.png");
 }
-.figma-hex{
+
+.figma-hex {
     background-image: url("./assets/icones/figma-hex.png");
 }
-.blender-hex{
+
+.blender-hex {
     background-image: url("./assets/icones/blender-hex.png");
 }
-.arduino-hex{
+
+.arduino-hex {
     background-image: url("./assets/icones/arduino-hex.png");
 }
-.profiCAD-hex{
+
+.profiCAD-hex {
     background-image: url("./assets/icones/profiCAD-hex.png");
 }
-.electric-hex{
+
+.electric-hex {
     background-image: url("./assets/icones/electric-hex.png");
 }
 
-.html-progress{
+.html-progress {
     width: 70%;
     height: 100%;
     background-color: #F35B04;
     border-radius: 5px;
 }
-.css-progress{
+
+.css-progress {
     width: 40%;
     height: 100%;
     background-color: #2196F3;
     border-radius: 5px;
 }
-.js-progress{
+
+.js-progress {
     width: 30%;
     height: 100%;
     background-color: #F0DB4F;
     border-radius: 5px;
 }
-.c-progress{
+
+.c-progress {
     width: 40%;
     height: 100%;
     background-color: #782379;
     border-radius: 5px;
 }
-.sql-progress{
+
+.sql-progress {
     width: 60%;
     height: 100%;
     background-color: #00758F;
     border-radius: 5px;
 }
-.figma-progress{
+
+.figma-progress {
     width: 60%;
     height: 100%;
     background-color: #00CF7F;
     border-radius: 5px;
 }
-.blender-progress{
+
+.blender-progress {
     width: 30%;
     height: 100%;
     background-color: #275787;
     border-radius: 5px;
 }
-.arduino-progress{
+
+.arduino-progress {
     width: 20%;
     height: 100%;
     background-color: #00979D;
     border-radius: 5px;
 }
-.profiCAD-progress{
+
+.profiCAD-progress {
     width: 50%;
     height: 100%;
     background-color: #275787;
     border-radius: 5px;
 }
-.electric-progress{
+
+.electric-progress {
     width: 80%;
     height: 100%;
     background-color: #F0A500;
     border-radius: 5px;
 }
 
-.skill-achieved .html-presentage{
+.skill-achieved .html-presentage {
     color: #F35B04;
 }
-.skill-achieved .css-presentage{
+
+.skill-achieved .css-presentage {
     color: #2196F3;
 }
-.skill-achieved .js-presentage{
+
+.skill-achieved .js-presentage {
     color: #F0DB4F;
 }
-.skill-achieved .c-presentage{
+
+.skill-achieved .c-presentage {
     color: #782379;
 }
-.skill-achieved .sql-presentage{
+
+.skill-achieved .sql-presentage {
     color: #00758F;
 }
-.skill-achieved .figma-presentage{
+
+.skill-achieved .figma-presentage {
     color: #00CF7F;
 }
-.skill-achieved .blender-presentage{
+
+.skill-achieved .blender-presentage {
     color: #275787;
 }
-.skill-achieved .arduino-presentage{
+
+.skill-achieved .arduino-presentage {
     color: #00979D;
 }
-.skill-achieved .profiCAD-presentage{
+
+.skill-achieved .profiCAD-presentage {
     color: #275787;
 }
-.skill-achieved .electric-presentage{
+
+.skill-achieved .electric-presentage {
     color: #F0A500;
 }
+
+/* ====== Work page CSS setings ===== */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.electric-work-container {
+    position: relative;
+    background-image: url("./assets/images/electric-work-background.jpg");
+    background-position: center;
+    aspect-ratio: 2/3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlayer-electric-work {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.experience-title {
+    z-index: 2;
+    width: 95%;
+    margin-top: 20px;
+    font-family: TitelText;
+    font-size: 24px;
+    color: #582F0E;
+    border-bottom: 1px solid #582F0E;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    gap: 10px;
+    padding-left: 10px;
+    margin-top: 25px;
+    font-family: AllText;
+}
+
+.experience-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.experience-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 70%;
+}
+
+.company-title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.company-info {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.company-logo {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+.self-employed {
+    background-image: url("./assets/icones/engineering.png");
+}
+
+.gold-electric {
+    background-image: url("./assets/icones/goldelectric.png");
+}
+
+.demaS {
+    background-image: url("./assets/icones/demaS.png");
+}
+
+.position,
+.period {
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.period span {
+    font-weight: normal;
+}
+
+.project-list {
+    position: relative;
+    width: 95%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #582F0E;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4B652D;
+    width: 100px;
+    height: 100px;
+    background-color: #BCBD8B;
+    border-radius: 8px;
+    gap: 5px;
+}
+
+.icone-installations, .icone-lighting, .icone-electronics{
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+}
+
+.icone-installations{
+     background-image: url("./assets/icones/electrician.png");
+}
+
+.icone-lighting{
+    background-image: url("./assets/icones/electric.png");
+}
+
+.icone-electronics{
+    background-image: url("./assets/icones/circuit-board.png");
+}
+
+.project-title{
+    font-family: AllText;
+    font-size: 14px;
+    color: #000000;
+    font-style: italic;
+}
+.separation-line {
+    width: 100%;
+    height: 3px;
+    background-color: #4B652D;
+}
+
 
 /* _______________________________________ Menu and Others SETTINGS _______________________________________ */
 /* ====== Menu CSS setings ===== */
