@@ -23,6 +23,7 @@
 /* _______________________________________ PAGES SETTINGS _______________________________________ */
 /* ====== Home page CSS setings ===== */
 .container {
+    position: relative;
     background-color: #FFFFFF;
     width: 100%;
     height: auto;
@@ -701,7 +702,7 @@
     background-position: center;
 }
 
-.modal-click{
+.modal-click {
     position: absolute;
     top: 0;
     left: 0;
@@ -954,7 +955,151 @@
     letter-spacing: 1px;
 }
 
-.modal-click:hover{
+.modal-click:hover {
     cursor: pointer;
     border: 2px solid #4B652D;
+}
+
+.work-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #717744;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#installations-modal {
+    display: none;
+}
+
+#installations-modal.active {
+    display: flex;
+}
+
+.modal-title-control {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 20px;
+}
+
+.modal-title {
+    font-family: TitelText;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.close-modal {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.close-modal p {
+    font-family: AllText;
+}
+
+.close-modal:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #3a4e22;
+}
+
+.info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.info-container p {
+    font-family: AllText;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.modal-content {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-title{
+    margin-top: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.project-list-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.project-card-click{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background: linear-gradient(to right, #EFF1ED, #737373);
+}
+
+.project-card-click:hover{
+    border: 2px solid #E9EDC9;
+    cursor: pointer;
+}
+
+.project-image{
+    width: 40%;
+    height: 100%;
+    background-image: url("./assets/images/lightbulb-1875247_1920.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-short-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: AllText;
+    width: 40%;
+}
+
+.title-project{
+    font-size: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.location-project, .date-project{
+    font-style: italic;
+}
+
+.date-project{
+    margin-bottom: 3px;
+    font-size: 14px;
 }
