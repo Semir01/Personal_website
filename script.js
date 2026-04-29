@@ -57,46 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* == DROPDOWN == */
-    const InstallationdropdownTrigger = document.getElementById("installations-2026-trigger");
-    const dropdownContent2026 = document.getElementById("installations-2026-content");
+    const dropdownTrigger = document.querySelector(".project-card-click");
+    const dropdownContent = document.querySelector(".project-no1-info");
 
-    if (InstallationdropdownTrigger && dropdownContent2026) {
-        InstallationdropdownTrigger.addEventListener("click", () => {
-            dropdownContent2026.classList.toggle("active");
+    if (dropdownTrigger) {
+        dropdownTrigger.addEventListener("click", () => {
+            dropdownContent.classList.toggle("active");
         });
     }
-
-    /* == IMAGE SLIDER == */
-    const imageList = document.querySelector(".image-list");
-    const items = document.querySelectorAll(".image-item");
-    const nextBtn = document.querySelector(".right");
-    const prevBtn = document.querySelector(".left");
-
-    let index = 0;
-
-    function updateSlider() {
-        imageList.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-        index++;
-        if (index >= items.length) index = 0; // kružno
-        updateSlider();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        index--;
-        if (index < 0) index = items.length - 1; // kružno
-        updateSlider();
-    });
-
-
-    /* == FULLSCREEN == */
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            item.requestFullscreen();
-        });
-    });
 
     /* == SLIDER == */
     const wrapper = document.querySelector(".slide-wrapper");
