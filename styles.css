@@ -966,7 +966,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #717744;
+    background-color: #464545;
     z-index: 4;
     display: flex;
     flex-direction: column;
@@ -1022,7 +1022,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 15px;
 }
 
 .info-container p {
@@ -1054,6 +1054,7 @@
     width: 100%;
     height: auto;
     padding: 5px;
+    margin-top: 20px;
 }
 
 .project-card-click{
@@ -1066,8 +1067,9 @@
 }
 
 .project-card-click:hover{
-    border: 2px solid #E9EDC9;
+    border: 1px solid #c5ca9f;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .project-image{
@@ -1084,7 +1086,7 @@
     align-items: start;
     justify-content: center;
     color: #FFFFFF;
-    font-family: AllText;
+    font-family: DetailText;
     width: 40%;
 }
 
@@ -1101,5 +1103,22 @@
 
 .date-project{
     margin-bottom: 3px;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.project-more-info-dropdown{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom,#737373 ,#EFF1ED, #737373);
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.project-inside-content{
+    padding: 10px;
+}
+
+.project-more-info-dropdown.active{
+    height: 500px;
+    transition: height 0.5s ease;
 }
