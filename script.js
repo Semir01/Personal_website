@@ -36,9 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
-
-
-    /* == MODALS == */
+        
+/* == MODALS == 
     const closeModalTrigger = document.getElementById("close-modal-trigger");
     const installationsModalTrigger = document.getElementById("installations-modal-trigger");
     const installationsModal = document.getElementById("installations-modal");
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* == DROPDOWN == */
+     == DROPDOWN == 
     const dropdownTrigger = document.querySelector(".project-card-click");
     const dropdownContent = document.querySelector(".project-no1-info");
 
@@ -64,9 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownTrigger.addEventListener("click", () => {
             dropdownContent.classList.toggle("active");
         });
-    }
-
-    /* == SLIDER == */
+    } 
+*/
+    
+/* == SLIDER == */
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
 
