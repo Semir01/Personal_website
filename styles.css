@@ -112,12 +112,12 @@
 
 .home-image {
     width: 100%;
-    aspect-ratio: 2/3;
+    aspect-ratio: 2/2.4;
     margin-top: 40px;
     background-image: url("./assets/images/Semir_home_image.png");
     background-size: cover;
     background-position: center;
-    margin-top: 30px
+    margin-top: 50px
 }
 
 /* ====== About page CSS setings ===== */
@@ -821,7 +821,7 @@
 .menu-container {
     width: 270px;
     height: 852px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #717744;
