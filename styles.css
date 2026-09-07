@@ -33,9 +33,9 @@
 }
 
 .text-background {
-    background-color: #BCBD8B;
-    border-top: 10px solid #717744;
-    border-bottom: 10px solid #717744;
+    background-color: #bb9457;
+    border-top: 10px solid #432818;
+    border-bottom: 10px solid #432818;
     width: 100%;
     height: 617px;
     border-top-left-radius: 200px;
@@ -92,7 +92,7 @@
 .read-more-button {
     width: 280px;
     height: 50px;
-    background-color: #4B652D;
+    background-color: #6f1d1b;
     color: #FFFFFF;
     margin-top: 40px;
     border: 1px solid #FFFFFF;
@@ -106,7 +106,7 @@
 
 .read-more-button:hover {
     cursor: pointer;
-    background-color: #c5ca9f;
+    background-color: #5c3311;
     border: 2px solid #FFFFFF;
 }
 
@@ -781,7 +781,7 @@
     width: 10px;
     height: 10px;
     border-radius: 2px;
-    background-color: #4B652D;
+    background-color: #7f4f24;
 }
 
 .menu-icon .cover {
@@ -806,7 +806,7 @@
 .overlayer {
     position: fixed;
     inset: 0;
-    background: #BCBD8B90;
+    background: #6038086b;
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
@@ -824,9 +824,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #717744;
+    background-color: #6f4615;
     z-index: 3;
-    box-shadow: 8px 6px 15px #464545;
+    box-shadow: 6px 3px 8px #815116;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -865,24 +865,24 @@
     display: flex;
     align-items: center;
     padding-left: 20px;
-    background-color: #BCBD8B;
+    background-color: #8b5e34;
     border-radius: 8px;
 }
 
 .menu-item:hover {
     cursor: pointer;
-    background-color: #E9EDC9;
+    background-color: #904e10;
 }
 
 .menu-item.active {
-    background-color: #E9EDC9;
+    background-color: #904e10;
 }
 
 .menu-item a {
     font-size: 20px;
     font-family: AllText;
     font-weight: bold;
-    color: #582F0E;
+    color: #f8f7f6;
     text-decoration: none;
     width: 100%;
     height: 40px;
@@ -910,7 +910,7 @@
     align-items: center;
     margin-top: 39px;
     gap: 12px;
-    background-color: #4B652D;
+    background-color: #904e10;
     height: 351px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -941,14 +941,14 @@
 
 .contact-item:hover {
     cursor: pointer;
-    background-color: #E9EDC9;
+    background-color: #904e10;
 }
 
 .contact-item a {
     font-size: 14px;
     font-family: TitelText;
     font-style: italic;
-    color: #582F0E;
+    color: #f8f7f6;
     text-decoration: none;
     align-items: end;
     width: 100%;
