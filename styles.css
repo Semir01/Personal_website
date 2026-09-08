@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   z-index: 0;
-  border-bottom-left-radius: 400px;
+  overflow: hidden;
   background:
     radial-gradient(
       circle at 70% 25%,
@@ -49,7 +49,6 @@
   background-size: 300px;
   opacity: 0.7;
   pointer-events: none;
-  border-bottom-left-radius: 400px;
 }
 
 .content-all {
@@ -65,8 +64,9 @@
   width: 100%;
   height: auto;
   align-items: end;
-  margin-top: 80px;
+  margin-top: 120px;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .title,
@@ -93,8 +93,11 @@
   font-family: AllText;
   color: #ffffff;
   text-align: start;
-  font-weight: 100;
-  margin-top: 35px;
+  font-style: italic;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 4px double #c09d5f;
+  border-bottom: 4px double #c09d5f;
 }
 
 .read-more-button {
@@ -102,7 +105,8 @@
   height: 40px;
   background-color: #c9a66b;
   color: #ffffff;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 1px solid #ffffff;
   border-radius: 20px;
   font-family: AllText;
@@ -121,7 +125,7 @@
   aspect-ratio: 2/2.2;
   background-image: url("./assets/images/Semir_home_image.png");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   margin-top: auto;
 }
 
@@ -777,8 +781,8 @@
   flex-direction: column;
   gap: 2px;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
   z-index: 3;
 }
 
