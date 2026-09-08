@@ -24,22 +24,13 @@
 /* ====== Home page CSS setings ===== */
 .container {
   position: relative;
-  background-color: #f5f0e8;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   z-index: 0;
-}
-
-.text-background {
-  width: 100%;
-  height: 700px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-
+  border-bottom-left-radius: 400px;
   background:
     radial-gradient(
       circle at 70% 25%,
@@ -50,35 +41,34 @@
     linear-gradient(135deg, #5c1a1b 0%, #721f22 60%, #4a1113 100%);
 }
 
-.text-background::before {
+.container::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("./assets/images/pattern2.png");
   background-repeat: repeat;
   background-size: 300px;
-  opacity: 0.5;
+  opacity: 0.7;
   pointer-events: none;
+  border-bottom-left-radius: 400px;
 }
 
 .content-all {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
 .content {
   width: 100%;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 50%;
   align-items: end;
-  margin-top: 50px;
-  padding-right: 7px;
+  margin-top: auto;
+  padding-left: 10px;
 }
 
 .title,
@@ -106,17 +96,15 @@
   color: #ffffff;
   text-align: start;
   font-weight: 100;
-  margin-top: 25px;
-  padding-left: 10px;
+  margin-top: 35px;
 }
 
 .read-more-button {
-  width: 120px;
+  width: 160px;
   height: 30px;
   background-color: #c9a66b;
   color: #ffffff;
-  margin-top: 35px;
-  margin-left: 15px;
+  margin-top: 50px;
   border: 1px solid #ffffff;
   border-radius: 20px;
   font-family: AllText;
@@ -133,11 +121,10 @@
 .home-image {
   width: 100%;
   aspect-ratio: 2/2.2;
-  margin-top: 50px;
   background-image: url("./assets/images/Semir_home_image.png");
   background-size: cover;
   background-position: center;
-  margin-top: 50px;
+  margin-top: auto;
 }
 
 /* ====== About page CSS setings ===== */
