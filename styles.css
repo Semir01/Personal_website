@@ -33,18 +33,46 @@
 }
 
 .text-background {
-    background-color: #bb9457;
-    border-top: 10px solid #432818;
-    border-bottom: 10px solid #432818;
     width: 100%;
-    height: 617px;
-    border-top-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+    height: 715px;
+    border-top-left-radius: 130px;
+    border-bottom-right-radius: 130px;
     position: absolute;
     z-index: 1;
     max-width: 700px;
-    top: 0;
+    top: 30px;
     left: 0;
+
+    background:
+    radial-gradient(
+        circle at 70% 25%,
+        rgba(150, 65, 60, 0.35),
+        transparent 40%
+    ),
+    radial-gradient(
+        circle at 20% 100%,
+        rgba(0, 0, 0, 0.25),
+        transparent 50%
+    ),
+    linear-gradient(
+        135deg,
+        #5C1A1B 0%,
+        #721F22 60%,
+        #4A1113 100%
+    );
+}
+
+.text-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("./assets/images/pattern2.png");
+    background-repeat: repeat;
+    background-size: 300px;
+    border-top-left-radius: 130px;
+    border-bottom-right-radius: 130px;
+    opacity: 0.50;
+    pointer-events: none;
 }
 
 .content-all {
@@ -63,43 +91,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    margin-top: 20px;
+    margin-top: 50px;
     padding-right: 20px;
 }
 
 .title,
 .myName {
-    font-size: 50px;
-    font-family: TitelText;
-    color: #FFFFFF;
     letter-spacing: 1px;
     padding: 0;
 }
 
+.title{
+    color: #C9A66B;
+    font-size: 20px;
+    font-family: AllText;
+}
+
 .myName {
-    font-size: 32px;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 36px;    
+    font-family: TitelText;
 }
 
 .description {
-    font-size: 20px;
+    font-size: 18px;
     font-family: AllText;
     color: #FFFFFF;
     text-align: end;
-    font-style: italic;
-    margin-top: 40px;
+    font-weight: 100;
+    margin-top: 25px;
 }
 
 .read-more-button {
-    width: 280px;
+    width: 200px;
     height: 50px;
-    background-color: #6f1d1b;
+    background-color: #C9A66B;
     color: #FFFFFF;
-    margin-top: 40px;
+    margin-top: 50px;
     border: 1px solid #FFFFFF;
     border-radius: 8px;
     font-family: AllText;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
     font-style: italic;
     letter-spacing: 1px;
 }
@@ -117,7 +150,7 @@
     background-image: url("./assets/images/Semir_home_image.png");
     background-size: cover;
     background-position: center;
-    margin-top: 50px
+    margin-top: 56px
 }
 
 /* ====== About page CSS setings ===== */
