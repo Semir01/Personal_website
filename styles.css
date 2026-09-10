@@ -40,9 +40,11 @@
   border-bottom-left-radius: 140px;
   z-index: 1;
   background:
-    radial-gradient(circle at 70% 25%,
+    radial-gradient(
+      circle at 70% 25%,
       rgba(150, 65, 60, 0.35),
-      transparent 40%),
+      transparent 40%
+    ),
     radial-gradient(circle at 20% 100%, rgba(0, 0, 0, 0.25), transparent 50%),
     linear-gradient(135deg, #5c1a1b 0%, #721f22 60%, #4a1113 100%);
 }
@@ -148,7 +150,7 @@
   margin-top: 60px;
   border-top: 2px solid #c9a66b;
   border-bottom: 2px solid #c9a66b;
-  background-color: #5C1A1B;
+  background-color: #5c1a1b;
 }
 
 .page-title p {
@@ -310,12 +312,59 @@
 
 /* ====== Skills page CSS setings ===== */
 
+.skill-section-bacground{
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF4E3;
+}
 
+.description-bacground {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #5c1a1b;
+  border-bottom-right-radius: 140px;
+}
 
+.description-title,
+.description-info {
+  padding-left: 10px;
+  font-family: AllText;
+  color: #f5f0e8;
+}
 
+.description-title {
+  margin-top: 30px;
+  font-size: 26px;
+}
 
+.description-title label {
+  color: #c9a66b;
+}
 
+.description-info {
+  font-size: 16px;
+  margin-top: 10px;
+}
 
+.explore-projects-button {
+  width: 180px;
+  height: 30px;
+  background-color: #c9a66b;
+  border: 1px solid #ffffff;
+  color: #f5f0e8;
+  margin-left: 10px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.explore-projects-button:hover {
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  background-color: #c09d5f;
+}
 
 
 
