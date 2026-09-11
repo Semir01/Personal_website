@@ -404,7 +404,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
   gap: 15px;
 }
 
@@ -442,6 +441,38 @@
 
 .css-icon{
   background-image: url("./assets/icones/css-icon.png");
+}
+
+.js-icon{
+  background-image: url("./assets/icones/js-icon.png");
+}
+
+.c-icon{
+   background-image: url("./assets/icones/c-icon.png");
+}
+
+.sql-icon{
+  background-image: url("./assets/icones/sql-icon.png");
+}
+
+.figma-icon{
+  background-image: url("./assets/icones/figma-icon.png");
+}
+
+.blender-icon{
+  background-image: url("./assets/icones/blender-icon.png");
+}
+
+.arduino-icon{
+   background-image: url("./assets/icones/arduino-icont.png");
+}
+
+.profiCad-icon{
+  background-image: url("./assets/icones/profiCad-icon.png");
+}
+
+.electric-icon{
+  background-image: url("./assets/icones/electric-icon.png");
 }
 
 .name-description {
@@ -483,7 +514,61 @@
   border-radius: 10px;
 }
 
-.precent {
+.achived-skill{
+  height: 100%;
+  border-radius: 10px;
+}
+
+.html-achived{
+  width: 70%;
+  background-color: #FF8800;
+}
+
+.css-achived{
+  width: 50%;
+  background-color: #008EFF;
+}
+
+.js-achived{
+  width: 30%;
+  background-color: #FFDF00;
+}
+
+.c-achived{
+  width: 40%;
+  background-color: #A92487;
+}
+
+.sql-achived{
+  width: 60%;
+  background-color: #033b69;
+}
+
+.figma-achived{
+  width: 60%;
+  background-color: #1a8ce9;
+}
+
+.blender-achived{
+  width: 20%;
+  background-color: #fd9722;
+}
+
+.arduino-achived{
+  width: 20%;
+  background-color: rgb(56, 151, 155);
+}
+
+.profiCad-achived{
+  width: 50%;
+  background-color: #014277;
+}
+
+.electric-achived{
+  width: 95%;
+  background-color: #d49d3d;
+}
+.presentage  {
   font-weight: bold;
   color: #3e2723;
   font-size: 16px;
