@@ -72,18 +72,18 @@
                     </div>
                 </div>
                 <div class="project-list">
-                    <div class="project-item installations">
-                        <div class="modal-click" id="installations-modal-trigger"></div>
+                    <div class="project-item installations" data-category="installations">
+                        <div class="modal-click"></div>
                         <div class="icone-installations">
                         </div>
                         <p class="project-title">Installations</p>
                     </div>
-                    <div class="project-item lighting">
+                    <div class="project-item lighting" data-category="lighting">
                         <div class="modal-click"></div>
                         <div class="icone-lighting"></div>
                         <p class="project-title">Lighting</p>
                     </div>
-                    <div class="project-item electronics">
+                    <div class="project-item electronics" data-category="electronics">
                         <div class="modal-click"></div>
                         <div class="icone-electronics"></div>
                         <p class="project-title">Electronics</p>
@@ -114,12 +114,12 @@
                     </div>
                 </div>
                 <div class="project-list">
-                    <div class="project-item projects">
+                    <div class="project-item projects" data-category="projects">
                         <div class="modal-click"></div>
                         <div class="icone-projects"></div>
                         <p class="project-title">Projects</p>
                     </div>
-                    <div class="project-item practice">
+                    <div class="project-item practice" data-category="practice">
                         <div class="modal-click"></div>
                         <div class="icone-practice"></div>
                         <p class="project-title">Practice</p>
@@ -127,7 +127,33 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- ================= PROJECTS MODAL ================= -->
+        <div class="projects-modal-overlay" id="projects-modal">
+
+            <div class="projects-modal">
+
+                <div class="projects-modal-header">
+
+                    <h2 id="projects-modal-title">
+                        Installation Projects
+                    </h2>
+
+                    <button class="close-projects-modal">
+                        &times;
+                    </button>
+
+                </div>
+
+                <div class="projects-modal-body" id="projects-modal-body">
+
+                    <!-- Ovdje JavaScript ubacuje projekte -->
+
+                </div>
+
+            </div>
+
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
