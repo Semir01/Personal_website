@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
         
 /* == MODALS == */
-
+// Treba preuredit i izucit kako radi ne ovako dodavat napamet.
 const projects = {
 
     installations: [
