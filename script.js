@@ -63,7 +63,6 @@ const projects = {
 
     ],
 
-
     lighting: [
 
         {
@@ -76,7 +75,6 @@ const projects = {
         }
 
     ],
-
 
     electronics: [
 
@@ -94,7 +92,6 @@ const projects = {
 };
 
 const projectItems = document.querySelectorAll(".project-item");
-
 projectItems.forEach(item => {
 
     item.addEventListener("click", () => {
@@ -105,24 +102,22 @@ projectItems.forEach(item => {
 });
 
 const projectsModal = document.getElementById("projects-modal");
+const projectsModalTitle = document.getElementById("projects-modal-title");
+const projectsModalBody = document.getElementById("projects-modal-body");
+const closeProjectsModalButton = document.getElementById("close-project-modal-button");
 
-const projectsModalTitle =
-    document.getElementById("projects-modal-title");
-
-const projectsModalBody =
-    document.getElementById("projects-modal-body");
-
+closeProjectsModalButton.addEventListener("click", () => {
+    projectsModal.classList.remove("active");
+});
 
 function openProjectsModal(category) {
 
     const categoryProjects = projects[category];
-
     projectsModalBody.innerHTML = "";
 
     categoryProjects.forEach(project => {
 
         const projectCard = document.createElement("div");
-
         projectCard.classList.add("project-card");
 
         projectCard.innerHTML = `
@@ -134,9 +129,9 @@ function openProjectsModal(category) {
 
             <div class="project-card-content">
 
-                <h3>${project.title}</h3>
+                <p class="project-card-title">${project.title}</p>
 
-                <p>${project.description}</p>
+                <p class="project-card-description">${project.description}</p>
 
                 <div class="project-info">
                     <span>📍 ${project.location}</span>
