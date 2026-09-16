@@ -202,16 +202,14 @@ function openProjectsModal(category) {
         `;
 
         projectsModalBody.appendChild(projectCard);
-
+        document.body.classList.add("modal-open");
     });
 
     projectsModalTitle.textContent =
         category.charAt(0).toUpperCase() +
         category.slice(1) +
         " Projects";
-
-
+        
     projectsModal.classList.add("active");
-    document.body.classList.add("modal-open");
 
 }
