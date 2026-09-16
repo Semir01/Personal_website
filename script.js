@@ -159,7 +159,6 @@ const closeProjectsModalButton = document.getElementById("close-project-modal-bu
 
 closeProjectsModalButton.addEventListener("click", () => {
     projectsModal.classList.remove("active");
-    document.body.classList.remove("modal-open");
 });
 
 function openProjectsModal(category) {
@@ -202,14 +201,13 @@ function openProjectsModal(category) {
         `;
 
         projectsModalBody.appendChild(projectCard);
-        document.body.classList.add("modal-open");
     });
 
     projectsModalTitle.textContent =
         category.charAt(0).toUpperCase() +
         category.slice(1) +
         " Projects";
-        
+
     projectsModal.classList.add("active");
 
 }
