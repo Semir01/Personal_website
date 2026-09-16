@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
- 
-        
-/* == SLIDER == */
+
+
+    /* == SLIDER == */
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
 
@@ -159,6 +159,7 @@ const closeProjectsModalButton = document.getElementById("close-project-modal-bu
 
 closeProjectsModalButton.addEventListener("click", () => {
     projectsModal.classList.remove("active");
+    document.body.classList.remove("modal-open");
 });
 
 function openProjectsModal(category) {
@@ -211,5 +212,6 @@ function openProjectsModal(category) {
 
 
     projectsModal.classList.add("active");
+    document.body.classList.add("modal-open");
 
 }
