@@ -36,7 +36,58 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
+ 
         
+/* == SLIDER == */
+    const wrapper = document.querySelector(".slide-wrapper");
+    const indicators = document.querySelectorAll(".indicator");
+
+    let curentSlide = 0;
+
+    function showSlide(index) {
+        wrapper.style.transform = `translateX(-${index * 100}%)`;      // Move the wrapper to show the selected slide
+
+        indicators.forEach(ind => ind.classList.remove('active'));     // Remove active class from all indicators
+        indicators[index].classList.add('active');
+
+        curentSlide = index;
+    }
+
+    indicators.forEach((indicator, i) => {                             // Add click event listener to each indicator
+        indicator.addEventListener('click', () => {
+            showSlide(i);
+        });
+    });
+
+    showSlide(0);
+
+    /* Swipe functionality for mobile devices */
+    let startX = 0;
+    let endX = 0;
+
+    wrapper.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;     // Get the starting X coordinate of the touch    
+    });
+
+    wrapper.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].clientX; // Get the ending X coordinate of the touch
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        let diff = startX - endX;
+
+        if (diff > 50) {
+            let next = (curentSlide + 1) % indicators.length;  // Calculate the next slide index (wrap around to the beginning)
+            showSlide(next);
+        } else if (diff < -50) {
+            let prev = (curentSlide - 1 + indicators.length) % indicators.length;   // Calculate the previous slide index (wrap around to the end)
+            showSlide(prev);
+        }
+    }
+})
+
+
 /* == MODALS == */
 // Treba preuredit i izucit kako radi ne ovako dodavat napamet.
 const projects = {
@@ -59,7 +110,7 @@ const projects = {
             location: "Konjic, Bosnia and Herzegovina",
             date: "November 8, 2023",
             image: "./assets/work-images/tab2.jpg"
-        }
+        },
 
     ],
 
@@ -162,57 +213,3 @@ function openProjectsModal(category) {
     projectsModal.classList.add("active");
 
 }
-
-
-
-
-    
-/* == SLIDER == */
-    const wrapper = document.querySelector(".slide-wrapper");
-    const indicators = document.querySelectorAll(".indicator");
-
-    let curentSlide = 0;
-
-    function showSlide(index) {
-        wrapper.style.transform = `translateX(-${index * 100}%)`;      // Move the wrapper to show the selected slide
-
-        indicators.forEach(ind => ind.classList.remove('active'));     // Remove active class from all indicators
-        indicators[index].classList.add('active');
-
-        curentSlide = index;
-    }
-
-    indicators.forEach((indicator, i) => {                             // Add click event listener to each indicator
-        indicator.addEventListener('click', () => {
-            showSlide(i);
-        });
-    });
-
-    showSlide(0);
-
-    /* Swipe functionality for mobile devices */
-    let startX = 0;
-    let endX = 0;
-
-    wrapper.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;     // Get the starting X coordinate of the touch    
-    });
-
-    wrapper.addEventListener("touchend", (e) => {
-        endX = e.changedTouches[0].clientX; // Get the ending X coordinate of the touch
-        handleSwipe();
-    });
-
-    function handleSwipe() {
-        let diff = startX - endX;
-
-        if (diff > 50) {
-            let next = (curentSlide + 1) % indicators.length;  // Calculate the next slide index (wrap around to the beginning)
-            showSlide(next);
-        } else if (diff < -50) {
-            let prev = (curentSlide - 1 + indicators.length) % indicators.length;   // Calculate the previous slide index (wrap around to the end)
-            showSlide(prev);
-        }
-    }
-})
-

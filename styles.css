@@ -1025,7 +1025,9 @@
 
 .projects-modal-container {
   width: 95%;
-  height: 80%;
+  max-width: 500px;
+  height: auto;
+  max-height: 90vh;
   background-color: #f5f0e8;
   border-radius: 10px;
   display: flex;
@@ -1062,26 +1064,31 @@
 
 .projects-modal-body{
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
+  gap: 5px;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .project-card{
   width: 95%;
-  height: 100%;
   border: 1px solid #A2A2A2;
   border-radius: 10px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .project-card img{
   width: 100%;
-  height: 70%;
+  height: 150px;
+  object-fit: cover;
+
 }
 
 .project-card-title{
@@ -1090,6 +1097,7 @@
   color: #3e2723;
   font-weight: bold;
   margin-top: 10px;
+  letter-spacing: 0.5px;
 }
 
 .project-card-description{
@@ -1115,12 +1123,19 @@
 }
 
 .view-details{
-  width: 100px;
+  width: 100%;
   height: 30px;
   border-radius: 20px;
   background-color: transparent;
-  border: 1px solid #c9a66b;
+  border: 2px solid #bb934f;
   cursor: pointer;
-  margin-top: 5px;
-  margin-left: 60%;
+  margin-top: 15px;
+  color: #3e2723;
+  font-family: AllText;
+  font-size: 16px;
+}
+
+.view-details:hover{
+  background-color: #bb934f;
+  color: #ffffff;
 }
