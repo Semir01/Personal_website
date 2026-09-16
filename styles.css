@@ -990,6 +990,10 @@
 }
 
 /* ====== Modals CSS setings ===== */
+body.modal-open{
+  overflow: hidden;
+}
+
 .modal-click:hover {
   cursor: pointer;
   border: 2px solid #ffffff;
@@ -1088,7 +1092,6 @@
   width: 100%;
   height: 150px;
   object-fit: cover;
-
 }
 
 .project-card-title{
