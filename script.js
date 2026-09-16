@@ -36,10 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
-        
-/* == MODALS == */
  
-    
+        
 /* == SLIDER == */
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
@@ -89,3 +87,129 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
+
+/* == MODALS == */
+// Treba preuredit i izucit kako radi ne ovako dodavat napamet.
+const projects = {
+
+    installations: [
+
+        {
+            id: 1,
+            title: "House Electrical Installation",
+            description: "Complete electrical installation for a family house.",
+            location: "Mostar, Bosnia and Herzegovina",
+            date: "April 12, 2024",
+            image: "./assets/work-images/tab1.jpg"
+        },
+
+        {
+            id: 2,
+            title: "Workshop Wiring & Protection",
+            description: "Electrical wiring and protection systems for a workshop.",
+            location: "Konjic, Bosnia and Herzegovina",
+            date: "November 8, 2023",
+            image: "./assets/work-images/tab2.jpg"
+        },
+
+    ],
+
+    lighting: [
+
+        {
+            id: 3,
+            title: "Outdoor Lighting Installation",
+            description: "Garden and facade lighting with LED solutions.",
+            location: "Glavatičevo, Bosnia and Herzegovina",
+            date: "July 21, 2023",
+            image: "./assets/projects/lighting-main.jpg"
+        }
+
+    ],
+
+    electronics: [
+
+        {
+            id: 4,
+            title: "Smart Heat Controller",
+            description: "ESP8266-based smart heating control system.",
+            location: "Glavatičevo, Bosnia and Herzegovina",
+            date: "2025",
+            image: "./assets/projects/smartheat-main.jpg"
+        }
+
+    ]
+
+};
+
+const projectItems = document.querySelectorAll(".project-item");
+projectItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+        const category = item.dataset.category;
+        openProjectsModal(category);
+    });
+
+});
+
+const projectsModal = document.getElementById("projects-modal");
+const projectsModalTitle = document.getElementById("projects-modal-title");
+const projectsModalBody = document.getElementById("projects-modal-body");
+const closeProjectsModalButton = document.getElementById("close-project-modal-button");
+
+closeProjectsModalButton.addEventListener("click", () => {
+    projectsModal.classList.remove("active");
+});
+
+function openProjectsModal(category) {
+
+    const categoryProjects = projects[category];
+    projectsModalBody.innerHTML = "";
+
+    categoryProjects.forEach(project => {
+
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("project-card");
+
+        projectCard.innerHTML = `
+
+            <img
+                src="${project.image}"
+                alt="${project.title}"
+            >
+
+            <div class="project-card-content">
+
+                <p class="project-card-title">${project.title}</p>
+
+                <p class="project-card-description">${project.description}</p>
+
+                <div class="project-info">
+                    <span>📍 ${project.location}</span>
+                    <span>📅 ${project.date}</span>
+                </div>
+
+                <button
+                    class="view-details"
+                    data-id="${project.id}"
+                    data-category="${category}">
+                    View Details
+                </button>
+
+            </div>
+
+        `;
+
+        projectsModalBody.appendChild(projectCard);
+
+    });
+
+    projectsModalTitle.textContent =
+        category.charAt(0).toUpperCase() +
+        category.slice(1) +
+        " Projects";
+
+
+    projectsModal.classList.add("active");
+
+}
