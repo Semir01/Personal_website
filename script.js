@@ -266,22 +266,51 @@ function openProjectDetails(project) {
 
 
     // Gallery
-    const gallery =
-        document.getElementById("details-gallery");
+    const gallery = document.getElementById("details-gallery");
+    const mainImage = document.getElementById("details-main-image");
+    let currentImageIndex = 0;
 
     gallery.innerHTML = "";
 
-    project.gallery.forEach(image => {
+    project.gallery.forEach((image, index) => {
 
         const img = document.createElement("img");
 
         img.src = image;
         img.alt = project.title;
 
-        gallery.appendChild(img);
+        img.addEventListener("click", () => {
+            currentImageIndex = index;
+            mainImage.src = project.gallery[currentImageIndex];
+        });
 
+        gallery.appendChild(img);
     });
 
+    const prevButton = document.getElementById("gallery-prev");
+    const nextButton = document.getElementById("gallery-next");
+
+    prevButton.addEventListener("click", () => {
+
+        currentImageIndex--;
+
+        if (currentImageIndex < 0) {
+            currentImageIndex = project.gallery.length - 1;
+        }
+
+        mainImage.src = project.gallery[currentImageIndex];
+    });
+
+    nextButton.addEventListener("click", () => {
+
+        currentImageIndex++;
+
+        if (currentImageIndex >= project.gallery.length) {
+            currentImageIndex = 0;
+        }
+
+        mainImage.src = project.gallery[currentImageIndex];
+    });
 
     const highlights =
         document.getElementById("details-highlights");
