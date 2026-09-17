@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /* == MENU == */
+    /* === MENU === */
     fetch("menu.html")                          // Assuming menu.html is in the same directory as the current page
         .then(response => response.text())      // Convert the response to text
         .then(data => {                         // Insert the menu HTML into the page
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
 
 
-    /* == SLIDER == */
+    /* === SLIDER === */
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
 
@@ -87,9 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
-
-/* == MODALS == */
+/* === MODALS === */
 // Treba preuredit i izucit kako radi ne ovako dodavat napamet.
+
+// ====== Projects Modal ====== //
 const projects = {
 
     installations: [
@@ -97,21 +98,26 @@ const projects = {
         {
             id: 1,
             title: "House Electrical Installation",
-            description: "Complete electrical installation for a family house.",
+            shortDescription:
+                "Complete electrical installation for a family house.",
+            description:
+                "Complete electrical installation for a family house, including distribution panel, power outlets, lighting circuits and testing.",
             location: "Mostar, Bosnia and Herzegovina",
             date: "April 12, 2024",
-            image: "./assets/work-images/tab1.jpg"
-        },
-
-        {
-            id: 2,
-            title: "Workshop Wiring & Protection",
-            description: "Electrical wiring and protection systems for a workshop.",
-            location: "Konjic, Bosnia and Herzegovina",
-            date: "November 8, 2023",
-            image: "./assets/work-images/tab2.jpg"
-        },
-
+            category: "Installations",
+            image: "./assets/work-images/tab1.jpg",
+            gallery: [
+                "./assets/work-images/tab1.jpg",
+                "./assets/work-images/tab2.jpg",
+                "./assets/work-images/viber_image_2026-04-30_08-50-34-105.jpg"
+            ],
+            highlights: [
+                "Distribution panel installation",
+                "Complete wiring",
+                "Indoor and outdoor lighting",
+                "Safety testing"
+            ]
+        }
     ],
 
     lighting: [
@@ -142,6 +148,11 @@ const projects = {
 
 };
 
+const projectsModal = document.getElementById("projects-modal");
+const projectsModalTitle = document.getElementById("projects-modal-title");
+const projectsModalBody = document.getElementById("projects-modal-body");
+const closeProjectsModalButton = document.getElementById("close-project-modal-button");
+
 const projectItems = document.querySelectorAll(".project-item");
 projectItems.forEach(item => {
 
@@ -151,11 +162,6 @@ projectItems.forEach(item => {
     });
 
 });
-
-const projectsModal = document.getElementById("projects-modal");
-const projectsModalTitle = document.getElementById("projects-modal-title");
-const projectsModalBody = document.getElementById("projects-modal-body");
-const closeProjectsModalButton = document.getElementById("close-project-modal-button");
 
 closeProjectsModalButton.addEventListener("click", () => {
     projectsModal.classList.remove("active");
@@ -185,8 +191,8 @@ function openProjectsModal(category) {
                 <p class="project-card-description">${project.description}</p>
 
                 <div class="project-info">
-                    <span>📍 ${project.location}</span>
-                    <span>📅 ${project.date}</span>
+                    <span> <img src="./assets/icones/maps-and-flags.png" alt=""> ${project.location}</span>
+                    <span> <img src="./assets/icones/date.png" alt=""> ${project.date}</span>
                 </div>
 
                 <button
@@ -211,3 +217,112 @@ function openProjectsModal(category) {
     projectsModal.classList.add("active");
 
 }
+
+
+// ====== Details Modal ====== //
+document.addEventListener("click", event => {
+
+    if (!event.target.classList.contains("view-details")) {
+        return;
+    }
+
+    const id = Number(event.target.dataset.id);
+    const category = event.target.dataset.category;
+
+    const project = projects[category].find(
+        project => project.id === id
+    );
+
+    openProjectDetails(project);
+
+});
+
+const detailsModal = document.getElementById("project-details-modal");
+const closeProjectDetailsButton = document.getElementById("close-project-details-button");
+
+closeProjectDetailsButton.addEventListener("click", () => {
+    detailsModal.classList.remove("active");
+});
+
+function openProjectDetails(project) {
+
+    document.getElementById("details-title").textContent =
+        project.title;
+
+    document.getElementById("details-main-image").src =
+        project.image;
+
+    document.getElementById("details-location").innerHTML = `
+    <img src="./assets/icones/maps-and-flags.png" alt="">
+    ${project.location}`;
+
+    document.getElementById("details-date").innerHTML = `
+    <img src="./assets/icones/date.png" alt="">
+    ${project.date}`;
+
+    document.getElementById("details-description").textContent = project.description;
+
+    /* = Gallery = */
+    const mainImage = document.getElementById("details-main-image");
+    let currentImageIndex = 0;
+
+    const gallery = document.getElementById("details-gallery");
+    gallery.innerHTML = "";
+
+    project.gallery.forEach((image, index) => {
+
+        const img = document.createElement("img");
+
+        img.src = image;
+        img.alt = project.title;
+
+        img.addEventListener("click", () => {
+            currentImageIndex = index;
+            mainImage.src = project.gallery[currentImageIndex];
+        });
+
+        gallery.appendChild(img);
+    });
+
+    const prevButton = document.getElementById("gallery-prev");
+    const nextButton = document.getElementById("gallery-next");
+
+    prevButton.addEventListener("click", () => {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+            currentImageIndex = project.gallery.length - 1;
+        }
+        mainImage.src = project.gallery[currentImageIndex];
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentImageIndex++;
+        if (currentImageIndex >= project.gallery.length) {
+            currentImageIndex = 0;
+        }
+        mainImage.src = project.gallery[currentImageIndex];
+    });
+
+    const highlights = document.getElementById("details-highlights");
+    highlights.innerHTML = "";
+
+    project.highlights.forEach(item => {
+
+        const li = document.createElement("li");
+        li.textContent = item;
+        highlights.appendChild(li);
+
+    });
+
+    projectsModal.classList.remove("active");
+    detailsModal.classList.add("active");
+}
+
+const backToProjects = document.getElementById("back-to-projects-button");
+
+backToProjects.addEventListener("click", () => {
+
+    detailsModal.classList.remove("active");
+    projectsModal.classList.add("active");
+
+});

@@ -130,28 +130,62 @@
 
         <!-- ================= PROJECTS MODAL ================= -->
         <div class="projects-modal-overlay" id="projects-modal">
-
             <div class="projects-modal-container">
-
                 <div class="projects-modal-header">
-
                     <p class="projects-modal-title" id="projects-modal-title">Installation Projects</p>
-
-                    <button class="close-projects-modal"
-                    id="close-project-modal-button">
+                    <button class="close-projects-modal" id="close-project-modal-button">
                         &times;
                     </button>
-
                 </div>
-
                 <div class="projects-modal-body" id="projects-modal-body">
-
                     <!-- Ovdje JavaScript ubacuje projekte -->
+                </div>
+            </div>
+        </div>
 
+        <!-- ================= PROJECTS DETAILS MODAL ================= -->
+        <div class="project-details-overlay" id="project-details-modal">
+
+            <div class="project-details-container">
+                <div class="projects-modal-header">
+                    <p class="projects-modal-title" id="details-title">
+                        Project Details
+                    </p>
+                    <button class="close-project-details" id="close-project-details-button">
+                        &times;
+                    </button>
                 </div>
 
-            </div>
+                <div class="project-details-body">
+                    <p class="project-gallery">Project Gallery</p>
 
+                    <div class="details-main-image-container">
+
+                        <button class="gallery-prev" id="gallery-prev">&#10094;</button>
+
+                        <img class="details-main-image" id="details-main-image" src="" alt="Project image">
+
+                        <button class="gallery-next" id="gallery-next">&#10095;</button>
+
+                    </div>
+                    <div class="details-gallery" id="details-gallery">
+                    </div>
+
+                    <div class="project-info-details-modal">
+                        <span id="details-location"></span>
+                        <span id="details-date"></span>
+                    </div>
+
+                    <p class="project-description">Project Description</p>
+                    <p class="details-description" id="details-description"></p>
+                    <p class="key-higlights">Key Highlights</p>
+                    <ul class="details-highlights" id="details-highlights"></ul>
+
+                    <button class="back-to-projects-button" id="back-to-projects-button">
+                        Back to Projects
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
