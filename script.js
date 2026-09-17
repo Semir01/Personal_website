@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
-
 /* === MODALS === */
 // Treba preuredit i izucit kako radi ne ovako dodavat napamet.
 
@@ -261,15 +260,13 @@ function openProjectDetails(project) {
     <img src="./assets/icones/date.png" alt="">
     ${project.date}`;
 
-    document.getElementById("details-description").textContent =
-        project.description;
+    document.getElementById("details-description").textContent = project.description;
 
-
-    // Gallery
-    const gallery = document.getElementById("details-gallery");
+    /* = Gallery = */
     const mainImage = document.getElementById("details-main-image");
     let currentImageIndex = 0;
 
+    const gallery = document.getElementById("details-gallery");
     gallery.innerHTML = "";
 
     project.gallery.forEach((image, index) => {
@@ -291,45 +288,34 @@ function openProjectDetails(project) {
     const nextButton = document.getElementById("gallery-next");
 
     prevButton.addEventListener("click", () => {
-
         currentImageIndex--;
-
         if (currentImageIndex < 0) {
             currentImageIndex = project.gallery.length - 1;
         }
-
         mainImage.src = project.gallery[currentImageIndex];
     });
 
     nextButton.addEventListener("click", () => {
-
         currentImageIndex++;
-
         if (currentImageIndex >= project.gallery.length) {
             currentImageIndex = 0;
         }
-
         mainImage.src = project.gallery[currentImageIndex];
     });
 
-    const highlights =
-        document.getElementById("details-highlights");
-
+    const highlights = document.getElementById("details-highlights");
     highlights.innerHTML = "";
 
     project.highlights.forEach(item => {
 
         const li = document.createElement("li");
-
         li.textContent = item;
-
         highlights.appendChild(li);
 
     });
 
     projectsModal.classList.remove("active");
     detailsModal.classList.add("active");
-
 }
 
 const backToProjects = document.getElementById("back-to-projects-button");
