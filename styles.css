@@ -995,7 +995,8 @@
   border: 2px solid #ffffff;
 }
 
-.projects-modal-overlay {
+/* ====== Projects Modal and Details Modal CSS setings ===== */
+.projects-modal-overlay, .project-details-overlay {
   background-color: #c9a66b57;
   position: absolute;
   z-index: 5;
@@ -1009,8 +1010,8 @@
   align-items: center;
 }
 
-.projects-modal-overlay.active {
-  background-color: #c9a66b57;
+.projects-modal-overlay.active, .project-details-overlay.active {
+  background-color: #b39b7388;
   position: absolute;
   z-index: 5;
   top: 0;
@@ -1023,12 +1024,12 @@
   align-items: center;
 }
 
-.projects-modal-container {
+.projects-modal-container, .project-details-container{
   width: 95%;
   max-width: 500px;
   height: auto;
   max-height: 90vh;
-  background-color: #f5f0e8;
+  background-color: #fff7eb;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -1050,9 +1051,10 @@
   font-size: 20px;
   font-style: normal;
   color: #ffffff;
+  letter-spacing: 1px;
 }
 
-.close-projects-modal{
+.close-projects-modal, .close-project-details{
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
@@ -1062,7 +1064,7 @@
   cursor: pointer;
 }
 
-.projects-modal-body{
+.projects-modal-body, .project-details-body{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1106,7 +1108,7 @@
   margin-top: 5px;
 }
 
-.project-info{
+.project-info, .project-info-details-modal{
   margin-top: 10px;
   width: 100%;
   display: flex;
@@ -1137,4 +1139,85 @@
 .view-details:hover{
   background-color: #bb934f;
   color: #ffffff;
+}
+
+.project-details-body{
+  padding: 10px;
+  align-items: normal;
+}
+
+.details-main-image{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details-gallery{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 120px;
+  border-bottom: 1px solid #A2A2A2;
+}
+
+.details-gallery img{
+  width: 50%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-info-details-modal{
+  margin-top: 0px;
+  height: 50px;
+  flex-direction: row;
+  border-bottom: 1px solid #A2A2A2;
+  align-items: center;
+  gap: 50px;
+}
+
+.project-info-details-modal span, .details-description,
+.key-higlights, .details-highlights, .back-to-projects-button, .project-description{
+  font-family: AllText;
+}
+
+.project-info-details-modal span{
+  font-size: 12px;
+  color: #A2A2A2;
+}
+
+.details-description, .key-higlights, .details-highlights{
+   color: #3e2723;
+}
+
+.details-description{
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.key-higlights, .project-description{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.details-highlights{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.back-to-projects-button{
+  margin-top: 20px;
+  width: 120px;
+  height: 30px;
+  background-color: #c9a66b;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
 }
