@@ -1013,7 +1013,6 @@
 
 .projects-modal-overlay.active,
 .project-details-overlay.active {
-  background-color: #b39b7388;
   display: flex;
 }
 
@@ -1123,13 +1122,12 @@
   font-size: 14px;
   color: #3e2723;
   margin-top: 5px;
-  font-weight: bold;
 }
 
 .project-info span img,
 .project-info-details-modal span img {
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
 }
 
@@ -1162,17 +1160,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 }
 
 .details-main-image {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px;
 }
 
-/* Dugmad */
 .gallery-prev,
 .gallery-next {
   position: absolute;
@@ -1217,7 +1212,6 @@
   padding: 10px 0;
   overflow-x: auto;
   border-bottom: 1px solid #A2A2A2;
-  background-color: #f7ecda;
 }
 
 .details-gallery img {
@@ -1231,12 +1225,10 @@
 
 .project-info-details-modal {
   margin-top: 0px;
-  height: 50px;
-  flex-direction: row;
+  height: auto;
+  flex-direction: column;
   border-bottom: 1px solid #A2A2A2;
-  align-items: center;
-  justify-content: center;
-  gap: 15px
+  gap: 3px
 }
 
 .project-info-details-modal span,
@@ -1250,7 +1242,7 @@
 }
 
 .project-info-details-modal span {
-  font-size: 12px;
+  font-size: 14px;
   color: #A2A2A2;
 }
 
@@ -1271,12 +1263,15 @@
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
+  font-style: italic;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .details-highlights {
   margin-top: 5px;
-  margin-left: 20px;
-  list-style: none;
+  margin-left: 25px;
+  list-style:circle;
 }
 
 .details-highlights li {
@@ -1285,10 +1280,10 @@
 }
 
 .back-to-projects-button {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
   width: 180px;
-  height: 50px;
+  height: 30px;
   background-color: transparent;
   border: 1px solid #c9a66b;
   border-radius: 10px;

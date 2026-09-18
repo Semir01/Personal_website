@@ -102,14 +102,27 @@ const projects = {
                 "Complete electrical installation for a family house.",
             description:
                 "Complete electrical installation for a family house, including distribution panel, power outlets, lighting circuits and testing.",
-            location: "Mostar, Bosnia and Herzegovina",
-            date: "April 12, 2024",
+            location: "Konjic, Bosnia and Herzegovina",
+            date: "Novembar 4, 2025",
             category: "Installations",
-            image: "./assets/work-images/tab1.jpg",
+            image: "./assets/work-images/electrician/instalations/project- family-home/image1.jpg",
             gallery: [
-                "./assets/work-images/tab1.jpg",
-                "./assets/work-images/tab2.jpg",
-                "./assets/work-images/viber_image_2026-04-30_08-50-34-105.jpg"
+                "./assets/work-images/electrician/instalations/project- family-home/image1.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image2.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image3.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image4.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image5.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image6.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image7.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image8.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image9.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image10.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image11.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image12.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image13.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image14.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image15.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image16.jpg",
             ],
             highlights: [
                 "Distribution panel installation",
@@ -191,8 +204,8 @@ function openProjectsModal(category) {
                 <p class="project-card-description">${project.description}</p>
 
                 <div class="project-info">
-                    <span> <img src="./assets/icones/maps-and-flags.png" alt=""> ${project.location}</span>
-                    <span> <img src="./assets/icones/date.png" alt=""> ${project.date}</span>
+                    <span> <img src="./assets/icones/gold-location.png" alt=""> ${project.location}</span>
+                    <span> <img src="./assets/icones/gold-calendar.png" alt=""> ${project.date}</span>
                 </div>
 
                 <button
@@ -253,11 +266,11 @@ function openProjectDetails(project) {
         project.image;
 
     document.getElementById("details-location").innerHTML = `
-    <img src="./assets/icones/maps-and-flags.png" alt="">
+    <img src="./assets/icones/gold-location.png" alt="">
     ${project.location}`;
 
     document.getElementById("details-date").innerHTML = `
-    <img src="./assets/icones/date.png" alt="">
+    <img src="./assets/icones/gold-calendar.png" alt="">
     ${project.date}`;
 
     document.getElementById("details-description").textContent = project.description;
