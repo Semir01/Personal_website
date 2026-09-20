@@ -88,11 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 /* === MODALS === */
-// Treba preuredit i izucit kako radi ne ovako dodavat napamet.
 
 // ====== Projects Modal ====== //
 const projects = {
-
     installations: [
         {
             id: 1,
@@ -101,7 +99,7 @@ const projects = {
                 "Complete electrical installation for a family house.",
             description:
                 "Complete electrical installation for a family house, including distribution panel, power outlets, lighting circuits and testing.",
-            location: "Konjic, Bosnia and Herzegovina",
+            location: "Donje Selo, Bosnia and Herzegovina",
             date: "Novembar 4, 2025",
             category: "Installations",
             image: "./assets/work-images/electrician/instalations/project- family-home/image1.jpg",
@@ -220,7 +218,6 @@ const closeProjectsModalButton = document.getElementById("close-project-modal-bu
 
 const projectItems = document.querySelectorAll(".project-item");
 projectItems.forEach(item => {
-
     item.addEventListener("click", () => {
         const category = item.dataset.category;
         openProjectsModal(category);
@@ -268,21 +265,15 @@ function openProjectsModal(category) {
                 </button>
 
             </div>
-
         `;
 
         projectsModalBody.appendChild(projectCard);
     });
 
-    projectsModalTitle.textContent =
-        category.charAt(0).toUpperCase() +
-        category.slice(1) +
-        " Projects";
-
+    projectsModalTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + "Projects";
     projectsModal.classList.add("active");
 
 }
-
 
 // ====== Details Modal ====== //
 document.addEventListener("click", event => {
@@ -384,7 +375,6 @@ function openProjectDetails(project) {
 }
 
 const backToProjects = document.getElementById("back-to-projects-button");
-
 backToProjects.addEventListener("click", () => {
 
     detailsModal.classList.remove("active");
