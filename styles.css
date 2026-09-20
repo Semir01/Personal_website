@@ -1223,6 +1223,10 @@
   cursor: pointer;
 }
 
+.details-gallery img.active {
+  border: 2px solid #c9a66b;
+}
+
 .project-info-details-modal {
   margin-top: 0px;
   height: auto;
