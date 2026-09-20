@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
 const projects = {
 
     installations: [
-
         {
             id: 1,
             title: "House Electrical Installation",
@@ -128,6 +127,59 @@ const projects = {
                 "Distribution panel installation",
                 "Complete wiring",
                 "Indoor and outdoor lighting",
+                "Safety testing"
+            ]
+        },
+        {
+            id: 2,
+            title: "Pool Pump Control System",
+            shortDescription: "Automated control system for a swimming pool pump.",
+            description: "Automated control system for a swimming pool pump, including timer and remote control.",
+            location: "Džajići, Bosnia and Herzegovina",
+            date: "June 2, 2026",
+            category: "Installations",
+            image: "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image7.jpg",
+            gallery: [
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image1.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image2.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image3.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image4.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image5.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image6.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image7.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image8.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image9.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image10.jpg",
+            ],
+            highlights: [
+                "Control panel installation",
+                "Timer setup",
+                "Remote control functionality"
+            ]
+        },
+        {
+            id: 3,
+            title: "OG Store Electrical Installation",
+            shortDescription: "Complete electrical installation for a commercial store.",
+            description: "Complete electrical installation for a commercial store, including power outlets, lighting circuits and testing.",
+            location: "Boračko jezero, Bosnia and Herzegovina",
+            date: "February 21, 2026",
+            category: "Installations",
+            image: "./assets/work-images/electrician/instalations/project-og-store-instalation/image1.jpg",
+            gallery: [
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image1.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image2.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image3.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image4.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image5.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image6.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image7.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image8.jpg",
+            ],
+            highlights: [
+                "Complete wiring",
+                "Lighting installation",
+                "Power outlets installation",
                 "Safety testing"
             ]
         }
