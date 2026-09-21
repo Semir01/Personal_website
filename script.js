@@ -359,6 +359,22 @@ function openProjectDetails(project) {
         mainImage.src = project.gallery[currentImageIndex];
     });
 
+
+    const imageShowModal = document.getElementById("image-show-modal");
+    const imageShow = document.getElementById("image-show");
+    const closeImageShow = document.getElementById("close-image-show-button");
+
+    closeImageShow.addEventListener("click", ()=>{
+        imageShowModal.classList.remove("active");
+    })
+
+    mainImage.addEventListener("click", () => {
+       imageShowModal.classList.add("active");
+       imageShow.src = mainImage.src;
+    })
+
+
+
     const highlights = document.getElementById("details-highlights");
     highlights.innerHTML = "";
 
