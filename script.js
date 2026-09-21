@@ -186,12 +186,33 @@ const projects = {
     lighting: [
 
         {
-            id: 3,
-            title: "Outdoor Lighting Installation",
-            description: "Garden and facade lighting with LED solutions.",
-            location: "Glavatičevo, Bosnia and Herzegovina",
-            date: "July 21, 2023",
-            image: "./assets/projects/lighting-main.jpg"
+            id: 1,
+            title: "Modern Bus Lighting",
+            shortDescription: "Complete modern bus lighting for family house.",
+            description: "Complete modern bus lighting for a family house, including main bus instaling and adding different types od lights.",
+            location:"Konjic, Bosnia and Herzegovina",
+            date:"June 8, 2026",
+            category:"Lighting",
+            image:"./assets/work-images/electrician/lighting/project-modern-bus-lighting/image6.jpg",
+            gallery: [
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image1.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image2.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image3.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image4.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image5.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image6.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image7.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image8.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image9.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image10.jpg",
+                "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image11.jpg",
+            ],
+            highlights: [
+               "Complete mesuring and prepering",
+               "Main bus instalation",
+               "Adding types of lights",
+               "Safety testing"
+            ]
         }
 
     ],
@@ -199,12 +220,27 @@ const projects = {
     electronics: [
 
         {
-            id: 4,
-            title: "Smart Heat Controller",
-            description: "ESP8266-based smart heating control system.",
+            id: 1,
+            title: "Smart Pool Pump Control System",
+            shortDescription:"Complete smart system for a pool pump station",
+            description: "Complete electrical instalation for the pump station. And Complete installing main smart system",
             location: "Glavatičevo, Bosnia and Herzegovina",
-            date: "2025",
-            image: "./assets/projects/smartheat-main.jpg"
+            date: "June 27, 2026",
+            category:"Electronics",
+            image: "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image3.jpg",
+            gallery: [
+                "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image1.jpg",
+                "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image2.jpg",
+                "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image3.jpg",
+                "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image4.jpg",
+                "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image5.jpg",
+            ],
+            highlights: [
+                "Complete instalation",
+                "Instaling smart components and conecting them",
+                "Concecting whit WiFi and testing",
+                "Safety testing"
+            ]
         }
 
     ]
@@ -270,7 +306,7 @@ function openProjectsModal(category) {
         projectsModalBody.appendChild(projectCard);
     });
 
-    projectsModalTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + "Projects";
+    projectsModalTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + " Projects";
     projectsModal.classList.add("active");
 
 }
