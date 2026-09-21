@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /* == MENU == */
+    /* === MENU === */
     fetch("menu.html")                          // Assuming menu.html is in the same directory as the current page
         .then(response => response.text())      // Convert the response to text
         .then(data => {                         // Insert the menu HTML into the page
@@ -36,143 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error("Error loading menu:", error));   // Handle errors in loading the menu
-        
-/* == MODALS == */
-// Treba preuredit i izucit kako radi ne ovako dodavat napamet.
-const projects = {
-
-    installations: [
-
-        {
-            id: 1,
-            title: "House Electrical Installation",
-            description: "Complete electrical installation for a family house.",
-            location: "Mostar, Bosnia and Herzegovina",
-            date: "April 12, 2024",
-            image: "./assets/work-images/tab1.jpg"
-        },
-
-        {
-            id: 2,
-            title: "Workshop Wiring & Protection",
-            description: "Electrical wiring and protection systems for a workshop.",
-            location: "Konjic, Bosnia and Herzegovina",
-            date: "November 8, 2023",
-            image: "./assets/work-images/tab2.jpg"
-        }
-
-    ],
 
 
-    lighting: [
-
-        {
-            id: 3,
-            title: "Outdoor Lighting Installation",
-            description: "Garden and facade lighting with LED solutions.",
-            location: "Glavatičevo, Bosnia and Herzegovina",
-            date: "July 21, 2023",
-            image: "./assets/projects/lighting-main.jpg"
-        }
-
-    ],
-
-
-    electronics: [
-
-        {
-            id: 4,
-            title: "Smart Heat Controller",
-            description: "ESP8266-based smart heating control system.",
-            location: "Glavatičevo, Bosnia and Herzegovina",
-            date: "2025",
-            image: "./assets/projects/smartheat-main.jpg"
-        }
-
-    ]
-
-};
-
-const projectItems = document.querySelectorAll(".project-item");
-
-projectItems.forEach(item => {
-
-    item.addEventListener("click", () => {
-        const category = item.dataset.category;
-        openProjectsModal(category);
-    });
-
-});
-
-const projectsModal = document.getElementById("projects-modal");
-
-const projectsModalTitle =
-    document.getElementById("projects-modal-title");
-
-const projectsModalBody =
-    document.getElementById("projects-modal-body");
-
-
-function openProjectsModal(category) {
-
-    const categoryProjects = projects[category];
-
-    projectsModalBody.innerHTML = "";
-
-    categoryProjects.forEach(project => {
-
-        const projectCard = document.createElement("div");
-
-        projectCard.classList.add("project-card");
-
-        projectCard.innerHTML = `
-
-            <img
-                src="${project.image}"
-                alt="${project.title}"
-            >
-
-            <div class="project-card-content">
-
-                <h3>${project.title}</h3>
-
-                <p>${project.description}</p>
-
-                <div class="project-info">
-                    <span>📍 ${project.location}</span>
-                    <span>📅 ${project.date}</span>
-                </div>
-
-                <button
-                    class="view-details"
-                    data-id="${project.id}"
-                    data-category="${category}">
-                    View Details
-                </button>
-
-            </div>
-
-        `;
-
-        projectsModalBody.appendChild(projectCard);
-
-    });
-
-    projectsModalTitle.textContent =
-        category.charAt(0).toUpperCase() +
-        category.slice(1) +
-        " Projects";
-
-
-    projectsModal.classList.add("active");
-
-}
-
-
-
-
-    
-/* == SLIDER == */
+    /* === SLIDER === */
     const wrapper = document.querySelector(".slide-wrapper");
     const indicators = document.querySelectorAll(".indicator");
 
@@ -221,3 +87,313 @@ function openProjectsModal(category) {
     }
 })
 
+/* === MODALS === */
+
+// ====== Projects Modal ====== //
+const projects = {
+    installations: [
+        {
+            id: 1,
+            title: "House Electrical Installation",
+            shortDescription:
+                "Complete electrical installation for a family house.",
+            description:
+                "Complete electrical installation for a family house, including distribution panel, power outlets, lighting circuits and testing.",
+            location: "Donje Selo, Bosnia and Herzegovina",
+            date: "Novembar 4, 2025",
+            category: "Installations",
+            image: "./assets/work-images/electrician/instalations/project- family-home/image1.jpg",
+            gallery: [
+                "./assets/work-images/electrician/instalations/project- family-home/image1.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image2.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image3.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image4.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image5.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image6.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image7.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image8.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image9.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image10.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image11.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image12.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image13.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image14.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image15.jpg",
+                "./assets/work-images/electrician/instalations/project- family-home/image16.jpg",
+            ],
+            highlights: [
+                "Distribution panel installation",
+                "Complete wiring",
+                "Indoor and outdoor lighting",
+                "Safety testing"
+            ]
+        },
+        {
+            id: 2,
+            title: "Pool Pump Control System",
+            shortDescription: "Automated control system for a swimming pool pump.",
+            description: "Automated control system for a swimming pool pump, including timer and remote control.",
+            location: "Džajići, Bosnia and Herzegovina",
+            date: "June 2, 2026",
+            category: "Installations",
+            image: "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image7.jpg",
+            gallery: [
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image1.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image2.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image3.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image4.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image5.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image6.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image7.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image8.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image9.jpg",
+                "./assets/work-images/electrician/instalations/project-pool-pump-control-station/image10.jpg",
+            ],
+            highlights: [
+                "Control panel installation",
+                "Timer setup",
+                "Remote control functionality"
+            ]
+        },
+        {
+            id: 3,
+            title: "OG Store Electrical Installation",
+            shortDescription: "Complete electrical installation for a commercial store.",
+            description: "Complete electrical installation for a commercial store, including power outlets, lighting circuits and testing.",
+            location: "Boračko jezero, Bosnia and Herzegovina",
+            date: "February 21, 2026",
+            category: "Installations",
+            image: "./assets/work-images/electrician/instalations/project-og-store-instalation/image1.jpg",
+            gallery: [
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image1.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image2.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image3.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image4.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image5.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image6.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image7.jpg",
+                "./assets/work-images/electrician/instalations/project-og-store-instalation/image8.jpg",
+            ],
+            highlights: [
+                "Complete wiring",
+                "Lighting installation",
+                "Power outlets installation",
+                "Safety testing"
+            ]
+        }
+    ],
+
+    lighting: [
+
+        {
+            id: 3,
+            title: "Outdoor Lighting Installation",
+            description: "Garden and facade lighting with LED solutions.",
+            location: "Glavatičevo, Bosnia and Herzegovina",
+            date: "July 21, 2023",
+            image: "./assets/projects/lighting-main.jpg"
+        }
+
+    ],
+
+    electronics: [
+
+        {
+            id: 4,
+            title: "Smart Heat Controller",
+            description: "ESP8266-based smart heating control system.",
+            location: "Glavatičevo, Bosnia and Herzegovina",
+            date: "2025",
+            image: "./assets/projects/smartheat-main.jpg"
+        }
+
+    ]
+
+};
+
+const projectsModal = document.getElementById("projects-modal");
+const projectsModalTitle = document.getElementById("projects-modal-title");
+const projectsModalBody = document.getElementById("projects-modal-body");
+const closeProjectsModalButton = document.getElementById("close-project-modal-button");
+
+const projectItems = document.querySelectorAll(".project-item");
+projectItems.forEach(item => {
+    item.addEventListener("click", () => {
+        const category = item.dataset.category;
+        openProjectsModal(category);
+    });
+
+});
+
+closeProjectsModalButton.addEventListener("click", () => {
+    projectsModal.classList.remove("active");
+});
+
+function openProjectsModal(category) {
+
+    const categoryProjects = projects[category];
+    projectsModalBody.innerHTML = "";
+
+    categoryProjects.forEach(project => {
+
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("project-card");
+
+        projectCard.innerHTML = `
+
+            <img
+                src="${project.image}"
+                alt="${project.title}"
+            >
+
+            <div class="project-card-content">
+
+                <p class="project-card-title">${project.title}</p>
+
+                <p class="project-card-description">${project.description}</p>
+
+                <div class="project-info">
+                    <span> <img src="./assets/icones/gold-location.png" alt=""> ${project.location}</span>
+                    <span> <img src="./assets/icones/gold-calendar.png" alt=""> ${project.date}</span>
+                </div>
+
+                <button
+                    class="view-details"
+                    data-id="${project.id}"
+                    data-category="${category}">
+                    View Details
+                </button>
+
+            </div>
+        `;
+
+        projectsModalBody.appendChild(projectCard);
+    });
+
+    projectsModalTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + "Projects";
+    projectsModal.classList.add("active");
+
+}
+
+// ====== Details Modal ====== //
+document.addEventListener("click", event => {
+
+    if (!event.target.classList.contains("view-details")) {
+        return;
+    }
+
+    const id = Number(event.target.dataset.id);
+    const category = event.target.dataset.category;
+
+    const project = projects[category].find(
+        project => project.id === id
+    );
+
+    openProjectDetails(project);
+
+});
+
+const detailsModal = document.getElementById("project-details-modal");
+const closeProjectDetailsButton = document.getElementById("close-project-details-button");
+
+closeProjectDetailsButton.addEventListener("click", () => {
+    detailsModal.classList.remove("active");
+});
+
+function openProjectDetails(project) {
+
+    document.getElementById("details-title").textContent =
+        project.title;
+
+    document.getElementById("details-main-image").src =
+        project.image;
+
+    document.getElementById("details-location").innerHTML = `
+    <img src="./assets/icones/gold-location.png" alt="">
+    ${project.location}`;
+
+    document.getElementById("details-date").innerHTML = `
+    <img src="./assets/icones/gold-calendar.png" alt="">
+    ${project.date}`;
+
+    document.getElementById("details-description").textContent = project.description;
+
+    /* = Gallery = */
+    const mainImage = document.getElementById("details-main-image");
+    let currentImageIndex = 0;
+
+    const gallery = document.getElementById("details-gallery");
+    gallery.innerHTML = "";
+
+    project.gallery.forEach((image, index) => {
+
+        const img = document.createElement("img");
+
+        img.src = image;
+        img.alt = project.title;
+
+        img.addEventListener("click", () => {
+            currentImageIndex = index;
+            mainImage.src = project.gallery[currentImageIndex];
+        });
+
+        gallery.appendChild(img);
+    });
+
+    const prevButton = document.getElementById("gallery-prev");
+    const nextButton = document.getElementById("gallery-next");
+
+    prevButton.addEventListener("click", () => {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+            currentImageIndex = project.gallery.length - 1;
+        }
+        mainImage.src = project.gallery[currentImageIndex];
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentImageIndex++;
+        if (currentImageIndex >= project.gallery.length) {
+            currentImageIndex = 0;
+        }
+        mainImage.src = project.gallery[currentImageIndex];
+    });
+
+
+    const imageShowModal = document.getElementById("image-show-modal");
+    const imageShow = document.getElementById("image-show");
+    const closeImageShow = document.getElementById("close-image-show-button");
+
+    closeImageShow.addEventListener("click", ()=>{
+        imageShowModal.classList.remove("active");
+    })
+
+    mainImage.addEventListener("click", () => {
+       imageShowModal.classList.add("active");
+       imageShow.src = mainImage.src;
+    })
+
+
+
+    const highlights = document.getElementById("details-highlights");
+    highlights.innerHTML = "";
+
+    project.highlights.forEach(item => {
+
+        const li = document.createElement("li");
+        li.textContent = item;
+        highlights.appendChild(li);
+
+    });
+
+    projectsModal.classList.remove("active");
+    detailsModal.classList.add("active");
+}
+
+const backToProjects = document.getElementById("back-to-projects-button");
+backToProjects.addEventListener("click", () => {
+
+    detailsModal.classList.remove("active");
+    projectsModal.classList.add("active");
+
+});

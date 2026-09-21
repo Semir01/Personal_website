@@ -995,7 +995,9 @@
   border: 2px solid #ffffff;
 }
 
-.projects-modal-overlay {
+/* ====== Projects Modal and Details Modal CSS setings ===== */
+.projects-modal-overlay,
+.project-details-overlay {
   background-color: #c9a66b57;
   position: absolute;
   z-index: 5;
@@ -1003,16 +1005,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.projects-modal {
+.projects-modal-overlay.active,
+.project-details-overlay.active {
+  display: flex;
+}
+
+.projects-modal-container,
+.project-details-container {
   width: 95%;
-  height: 80%;
-  background-color: #f5f0e8;
+  max-width: 500px;
+  height: auto;
+  background-color: #fff7eb;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -1024,24 +1033,306 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px 10px 0 0;
   background-color: #5c1a1b;
 }
 
-.projects-modal-title{
+.projects-modal-title {
   font-family: TitelText;
   font-size: 20px;
   font-style: normal;
   color: #ffffff;
+  letter-spacing: 1px;
 }
 
-.close-projects-modal{
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
+.close-projects-modal,
+.close-project-details,
+.close-image-show{
+  font-weight: bold; 
   background-color: transparent;
+  cursor: pointer; 
   border: none;
+}
+
+.close-projects-modal,
+.close-project-details{
+  font-size: 20px;
+  color: #ffffff;
   padding: 10px;
+}
+
+.projects-modal-body,
+.project-details-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.project-card {
+  width: 95%;
+  border: 1px solid #A2A2A2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project-card-title {
+  font-family: AllText;
+  font-size: 18px;
+  color: #3e2723;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.project-card-description {
+  font-family: AllText;
+  font-size: 14px;
+  color: #3e2723;
+  margin-top: 5px;
+}
+
+.project-info,
+.project-info-details-modal {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info span,
+.project-info-details-modal span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-info span {
+  font-family: AllText;
+  font-size: 14px;
+  color: #3e2723;
+  margin-top: 5px;
+}
+
+.project-info span img,
+.project-info-details-modal span img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.view-details {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #c9a66b;
   cursor: pointer;
+  margin-top: 15px;
+  color: #c9a66b;
+  font-family: AllText;
+  font-size: 16px;
+}
+
+.view-details:hover {
+  background-color: #bb934f;
+  color: #ffffff;
+}
+
+.project-details-body {
+  padding: 10px;
+  align-items: normal;
+}
+
+.details-main-image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-main-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.gallery-prev,
+.gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 70px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-prev {
+  left: 5px;
+}
+
+.gallery-next {
+  right: 5px;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  transform: translateY(-50%) scale(1.05);
+  border: 1px solid #c9a66b;
+  color: #c9a66b;
+}
+
+.details-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  overflow-x: auto;
+  border-bottom: 1px solid #A2A2A2;
+}
+
+.details-gallery img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-info-details-modal {
+  margin-top: 0px;
+  height: auto;
+  flex-direction: column;
+  border-bottom: 1px solid #A2A2A2;
+  gap: 3px
+}
+
+.project-info-details-modal span,
+.details-description,
+.key-higlights,
+.details-highlights,
+.back-to-projects-button,
+.project-description,
+.project-gallery {
+  font-family: AllText;
+}
+
+.project-info-details-modal span {
+  font-size: 14px;
+  color: #A2A2A2;
+}
+
+.details-description,
+.key-higlights,
+.details-highlights {
+  color: #3e2723;
+}
+
+.details-description {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.key-higlights,
+.project-description,
+.project-gallery {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.details-highlights {
+  margin-top: 5px;
+  margin-left: 25px;
+  list-style:circle;
+}
+
+.details-highlights li {
+  font-size: 14px;
+  color: #3e2723;
+}
+
+.back-to-projects-button {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 180px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #c9a66b;
+  border-radius: 10px;
+  color: #c9a66b;
+  font-size: 14px;
+}
+
+/* ====== Image Show Modal ===== */
+
+.image-show-modal-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #000000b9;
+  width:100%;
+  height:100%;
+  z-index: 6;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-show-modal-overlay.active{
+  display: flex;
+}
+
+.image-show-container{
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-show{
+  object-fit: contain;
+  object-position: center;
+}
+
+.close-image-show{
+  color: #c9a66b;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 30px;
+  
 }
