@@ -1039,11 +1039,10 @@
 }
 
 .projects-modal-title {
-  font-family: TitelText;
-  font-size: 20px;
+  font-family: AllText;
+  font-size: 16px;
   font-style: normal;
   color: #ffffff;
-  letter-spacing: 1px;
 }
 
 .close-projects-modal,
