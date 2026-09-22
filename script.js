@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showSlide(0);
 
-  /* Swipe functionality for mobile devices */
   let startX = 0;
   let endX = 0;
 
@@ -88,21 +87,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* === MODALS === */
-
 // ====== Conection Modal Skills and Work Page====== //
-
 const exploreProjectmodal = document.getElementById("explore-project-modal");
 const closeExploreProjectModal = document.getElementById("close-explore-project-modal-button");
 const openExploreProjectModal = document.getElementById("explore-projects-button");
 
-openExploreProjectModal.addEventListener("click", () => {
-    console.log ("Radi");
-  exploreProjectmodal.classList.add("active");
-});
+if (openExploreProjectModal && exploreProjectmodal) {
+  openExploreProjectModal.addEventListener("click", () => {
+    exploreProjectmodal.classList.add("active");
+  });
+}
 
-closeExploreProjectModal.addEventListener("click", () => {
-  exploreProjectmodal.classList.remove("active");
-});
+if(closeExploreProjectModal && exploreProjectmodal){
+   closeExploreProjectModal.addEventListener("click", () => {
+    exploreProjectmodal.classList.remove("active");
+  });
+}
+
+const showElectricianProjects = document.getElementById(
+  "show-electrician-projects-button",
+);
+const showWebDeveloperProjects = document.getElementById(
+  "show-web-developer-projects-button",
+);
 
 // ====== Projects Modal ====== //
 const projects = {
