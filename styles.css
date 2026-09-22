@@ -40,9 +40,11 @@
   border-bottom-left-radius: 140px;
   z-index: 1;
   background:
-    radial-gradient(circle at 70% 25%,
+    radial-gradient(
+      circle at 70% 25%,
       rgba(150, 65, 60, 0.35),
-      transparent 40%),
+      transparent 40%
+    ),
     radial-gradient(circle at 20% 100%, rgba(0, 0, 0, 0.25), transparent 50%),
     linear-gradient(135deg, #5c1a1b 0%, #721f22 60%, #4a1113 100%);
 }
@@ -408,7 +410,7 @@
 .skill-card {
   width: 100%;
   height: 195px;
-  background-color: #FFF1DA;
+  background-color: #fff1da;
   border-radius: 15px;
   padding: 20px;
   display: flex;
@@ -519,22 +521,22 @@
 
 .html-achived {
   width: 70%;
-  background-color: #FF8800;
+  background-color: #ff8800;
 }
 
 .css-achived {
   width: 50%;
-  background-color: #008EFF;
+  background-color: #008eff;
 }
 
 .js-achived {
   width: 30%;
-  background-color: #FFDF00;
+  background-color: #ffdf00;
 }
 
 .c-achived {
   width: 40%;
-  background-color: #A92487;
+  background-color: #a92487;
 }
 
 .sql-achived {
@@ -1027,7 +1029,8 @@
   flex-direction: column;
 }
 
-.projects-modal-header {
+.projects-modal-header,
+.explore-project-modal-header {
   width: 100%;
   height: 50px;
   display: flex;
@@ -1038,7 +1041,8 @@
   background-color: #5c1a1b;
 }
 
-.projects-modal-title {
+.projects-modal-title,
+.explore-project-modal-title {
   font-family: AllText;
   font-size: 16px;
   font-style: normal;
@@ -1047,15 +1051,17 @@
 
 .close-projects-modal,
 .close-project-details,
-.close-image-show{
-  font-weight: bold; 
+.close-image-show,
+.close-explore-projects-modal {
+  font-weight: bold;
   background-color: transparent;
-  cursor: pointer; 
+  cursor: pointer;
   border: none;
 }
 
 .close-projects-modal,
-.close-project-details{
+.close-project-details,
+.close-explore-projects-modal {
   font-size: 20px;
   color: #ffffff;
   padding: 10px;
@@ -1075,7 +1081,7 @@
 
 .project-card {
   width: 95%;
-  border: 1px solid #A2A2A2;
+  border: 1px solid #a2a2a2;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -1215,7 +1221,7 @@
   gap: 8px;
   padding: 10px 0;
   overflow-x: auto;
-  border-bottom: 1px solid #A2A2A2;
+  border-bottom: 1px solid #a2a2a2;
 }
 
 .details-gallery img {
@@ -1231,8 +1237,8 @@
   margin-top: 0px;
   height: auto;
   flex-direction: column;
-  border-bottom: 1px solid #A2A2A2;
-  gap: 3px
+  border-bottom: 1px solid #a2a2a2;
+  gap: 3px;
 }
 
 .project-info-details-modal span,
@@ -1247,7 +1253,7 @@
 
 .project-info-details-modal span {
   font-size: 14px;
-  color: #A2A2A2;
+  color: #a2a2a2;
 }
 
 .details-description,
@@ -1278,17 +1284,15 @@
 
 .project-gallery img,
 .project-description img,
-.key-higlights img{
+.key-higlights img {
   width: 50px;
   height: 50px;
 }
 
-
-
 .details-highlights {
   margin-top: 5px;
   margin-left: 25px;
-  list-style:circle;
+  list-style: circle;
 }
 
 .details-highlights li {
@@ -1309,25 +1313,24 @@
 }
 
 /* ====== Image Show Modal ===== */
-
-.image-show-modal-overlay{
-  position:absolute;
-  top:0;
-  left:0;
+.image-show-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #000000b9;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   z-index: 6;
   display: none;
   align-items: center;
   justify-content: center;
 }
 
-.image-show-modal-overlay.active{
+.image-show-modal-overlay.active {
   display: flex;
 }
 
-.image-show-container{
+.image-show-container {
   width: 100%;
   height: auto;
   max-height: 90vh;
@@ -1335,16 +1338,93 @@
   flex-direction: column;
 }
 
-.image-show{
+.image-show {
   object-fit: contain;
   object-position: center;
 }
 
-.close-image-show{
+.close-image-show {
   color: #ffffff;
   position: absolute;
   right: 30px;
   top: 30px;
   font-size: 30px;
-  
+}
+
+/* ====== Explore Projects Modal ===== */
+
+.explore-project-modal-overlayer {
+  width: 100%;
+  height: 100%;
+  background-color: #c9a66b57;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.explore-project-modal-overlayer.active {
+  display: flex;
+}
+
+.explore-project-modal-container {
+  width: 100%;
+  height: auto;
+  background-color: #fff7eb;
+  position: fixed;
+}
+
+.explore-project-modal-header {
+  border-radius: 0;
+}
+
+.explore-project-modal-button-section{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.explore-project-modal-button-section button{
+  width: 150px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #c9a66b;
+  border-radius: 10px;
+  color: #c9a66b;
+  font-size: 14px;
+  font-family: AllText;
+}
+
+.explore-project-modal-button-section button:hover{
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.electrician-conteiner, .webdeveloper-conteiner{
+  display: flex;
+  flex-direction: row;
+  background-color: #5c1a1b;
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+.electrician-conteiner img,
+.webdeveloper-conteiner img{
+  width: 60px;
+  height: 60px;
+  background-color: #c9a66b;
+  padding: 5px;
+  border-radius: 8px;
 }
