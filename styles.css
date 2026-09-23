@@ -355,8 +355,12 @@
   color: #f5f0e8;
   margin-left: 10px;
   margin-top: 40px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .explore-projects-button:hover {
@@ -1029,8 +1033,8 @@
   flex-direction: column;
 }
 
-.projects-modal-header,
-.explore-project-modal-header {
+.projects-modal-header
+{
   width: 100%;
   height: 50px;
   display: flex;
@@ -1041,8 +1045,8 @@
   background-color: #5c1a1b;
 }
 
-.projects-modal-title,
-.explore-project-modal-title {
+.projects-modal-title
+{
   font-family: AllText;
   font-size: 16px;
   font-style: normal;
@@ -1349,106 +1353,4 @@
   right: 30px;
   top: 30px;
   font-size: 30px;
-}
-
-/* ====== Explore Projects Modal ===== */
-
-.explore-project-modal-overlayer {
-  width: 100%;
-  height: 100%;
-  background-color: #c9a66b57;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  z-index: 6;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.explore-project-modal-overlayer.active {
-  display: flex;
-}
-
-.explore-project-modal-container {
-  width: 100%;
-  height: auto;
-  background-color: #fff7eb;
-  position: fixed;
-}
-
-.explore-project-modal-header {
-  border-radius: 0;
-}
-
-.explore-project-modal-section,
-.icon-title,
-.button-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.explore-project-modal-section {
-  width: 100%;
-  height: 100%;
-  gap: 10px;
-  padding: 10px;
-}
-
-.icon-title {
-  gap: 10px;
-  border-bottom: 4px double #c9a66b;
-  width: 100%;
-}
-
-.button-section-title{
-  font-family: AllText;
-  font-size: 20px;
-  color: #f5f0e8;
-  margin-bottom: 5px;
-}
-
-.button-section {
-  gap: 5px;
-}
-
-.button-section button {
-  width: 250px;
-  height: 35px;
-  background-color: transparent;
-  border: 1px solid #c9a66b;
-  border-radius: 10px;
-  color: #c9a66b;
-  font-size: 16px;
-  font-family: AllText;
-}
-
-.explore-project-modal-section button:hover {
-  color: #ffffff;
-  border: 1px solid #ffffff;
-}
-
-.electrician-conteiner,
-.webdeveloper-conteiner {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #5c1a1b;
-  height: auto;
-  width: 100%;
-  padding: 10px;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 10px;
-  gap: 20px;
-}
-
-.electrician-conteiner img,
-.webdeveloper-conteiner img {
-  width: 100px;
-  height: 100px;
-  background-color: #c9a66b;
-  padding: 5px;
-  border-radius: 8px;
 }

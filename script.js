@@ -87,30 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* === MODALS === */
-// ====== Conection Modal Skills and Work Page====== //
-const exploreProjectmodal = document.getElementById("explore-project-modal");
-const closeExploreProjectModal = document.getElementById("close-explore-project-modal-button");
-const openExploreProjectModal = document.getElementById("explore-projects-button");
-
-if (openExploreProjectModal && exploreProjectmodal) {
-  openExploreProjectModal.addEventListener("click", () => {
-    exploreProjectmodal.classList.add("active");
-  });
-}
-
-if(closeExploreProjectModal && exploreProjectmodal){
-   closeExploreProjectModal.addEventListener("click", () => {
-    exploreProjectmodal.classList.remove("active");
-  });
-}
-
-const showElectricianProjects = document.getElementById(
-  "show-electrician-projects-button",
-);
-const showWebDeveloperProjects = document.getElementById(
-  "show-web-developer-projects-button",
-);
-
 // ====== Projects Modal ====== //
 const projects = {
   installations: [
