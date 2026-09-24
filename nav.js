@@ -1,9 +1,6 @@
 /*  ============================ Variables ============================  */
 console.log("NAV.JS UCITAN");
-/* Navigation Elements */
 const dropDown = document.getElementById("drop-down-menu-section");
-
-/* Button Elements */
 const btnDropDownMenu = document.getElementById("btnDropDownMenu");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,15 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
 
-            // Postavi aktivnu stranicu
             NewSetActivePage();
-
 
         })
         .catch(err => console.error("Greška pri učitavanju navigacije:", err));
 });
 
-// Funkcija za aktivnu stranicu
 function SetActivePage() {
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".nav-item");
@@ -56,14 +50,9 @@ function SetActivePage() {
     });
 }
 
-
 function NewSetActivePage(){
     const allLinks = document.querySelectorAll(".nav-item, .drop-down-menu a");
-
-    // uzimamo ime trenutne stranice
     let currentPage = window.location.pathname.split("/").pop();
-
-    // Ako je URL prazan (https://username.github.io/)
     if (currentPage === "" || currentPage === "/") {
         currentPage = "index.html";
     }
