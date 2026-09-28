@@ -93,9 +93,9 @@ const projects = {
     {
       id: 1,
       title: "House Electrical Installation",
-      shortDescription: "Complete electrical installation for a family house.",
+      shortDescription: "Complete electrical installation for a family home.",
       description:
-        "Complete electrical installation for a family house, including distribution panel, power outlets, lighting circuits and testing.",
+        "Complete electrical installation for a family home, including the distribution panel, power outlets, lighting circuits, and safety testing.",
       location: "Donje Selo, Bosnia and Herzegovina",
       date: "Novembar 4, 2025",
       category: "Installations",
@@ -121,9 +121,9 @@ const projects = {
       ],
       highlights: [
         "Distribution panel installation",
-        "Complete wiring",
-        "Indoor and outdoor lighting",
-        "Safety testing",
+        "Complete electrical wiring",
+        "Indoor and outdoor lighting installation",
+        "Electrical safety testing",
       ],
     },
     {
@@ -131,7 +131,7 @@ const projects = {
       title: "Pool Pump Control System",
       shortDescription: "Automated control system for a swimming pool pump.",
       description:
-        "Automated control system for a swimming pool pump, including timer and remote control.",
+        "Automated control system for a swimming pool pump, featuring timer-based operation and remote control functionality.",
       location: "Džajići, Bosnia and Herzegovina",
       date: "June 2, 2026",
       category: "Installations",
@@ -151,8 +151,8 @@ const projects = {
       ],
       highlights: [
         "Control panel installation",
-        "Timer setup",
-        "Remote control functionality",
+        "Timer configuration",
+        "Remote control integration",
       ],
     },
     {
@@ -161,7 +161,7 @@ const projects = {
       shortDescription:
         "Complete electrical installation for a commercial store.",
       description:
-        "Complete electrical installation for a commercial store, including power outlets, lighting circuits and testing.",
+        "Complete electrical installation for a commercial store, including power outlets, lighting circuits, and electrical safety testing.",
       location: "Boračko jezero, Bosnia and Herzegovina",
       date: "February 21, 2026",
       category: "Installations",
@@ -178,10 +178,10 @@ const projects = {
         "./assets/work-images/electrician/instalations/project-og-store-instalation/image8.jpg",
       ],
       highlights: [
-        "Complete wiring",
+        "Complete electrical wiring",
         "Lighting installation",
-        "Power outlets installation",
-        "Safety testing",
+        "Power outlet installation",
+        "Electrical safety testing",
       ],
     },
   ],
@@ -189,10 +189,10 @@ const projects = {
   lighting: [
     {
       id: 1,
-      title: "Modern Bus Lighting",
-      shortDescription: "Complete modern bus lighting for family house.",
+      title: "Modern Busbar Lighting System",
+      shortDescription: "Modern busbar lighting installation for a family home.",
       description:
-        "Complete modern bus lighting for a family house, including main bus instaling and adding different types od lights.",
+        "Modern busbar lighting installation for a family home, including the installation of the main busbar system and various types of lighting fixtures.",
       location: "Konjic, Bosnia and Herzegovina",
       date: "June 8, 2026",
       category: "Lighting",
@@ -212,10 +212,10 @@ const projects = {
         "./assets/work-images/electrician/lighting/project-modern-bus-lighting/image11.jpg",
       ],
       highlights: [
-        "Complete mesuring and prepering",
-        "Main bus instalation",
-        "Adding types of lights",
-        "Safety testing",
+        "Lighting system measurement and preparation",
+        "Main busbar installation",
+        "Installation of various lighting fixtures",
+        "Electrical safety testing",
       ],
     },
   ],
@@ -224,9 +224,9 @@ const projects = {
     {
       id: 1,
       title: "Smart Pool Pump Control System",
-      shortDescription: "Complete smart system for a pool pump station",
+      shortDescription: "Smart control system for a swimming pool pump station.",
       description:
-        "Complete electrical instalation for the pump station. And Complete installing main smart system",
+        "Complete electrical installation for a swimming pool pump station, including the integration and configuration of a smart control system.",
       location: "Glavatičevo, Bosnia and Herzegovina",
       date: "June 27, 2026",
       category: "Electronics",
@@ -240,10 +240,10 @@ const projects = {
         "./assets/work-images/electrician/eletronics/project-smart-pool-pump-control-system/image5.jpg",
       ],
       highlights: [
-        "Complete instalation",
-        "Instaling smart components and conecting them",
-        "Concecting whit WiFi and testing",
-        "Safety testing",
+        "Complete electrical installation",
+        "Smart component installation and integration",
+        "Wi-Fi connectivity and system configuration",
+        "System testing and electrical safety checks",
       ],
     },
   ],
