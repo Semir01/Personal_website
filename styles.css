@@ -1063,7 +1063,6 @@
 
 .close-projects-modal,
 .close-project-details,
-.close-image-show,
 .close-explore-projects-modal {
   font-weight: bold;
   background-color: transparent;
@@ -1353,12 +1352,4 @@
 .image-show {
   object-fit: contain;
   object-position: center;
-}
-
-.close-image-show {
-  color: #ffffff;
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  font-size: 30px;
 }

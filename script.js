@@ -351,7 +351,7 @@ function openProjectDetails(project) {
   document.getElementById("details-description").textContent =
     project.description;
 
-  /* = Gallery = */
+  /* === Gallery === */
   const mainImage = document.getElementById("details-main-image");
   let currentImageIndex = 0;
 
@@ -391,18 +391,19 @@ function openProjectDetails(project) {
     mainImage.src = project.gallery[currentImageIndex];
   });
 
+  /* ===== Image Show Modal ===== */
+
   const imageShowModal = document.getElementById("image-show-modal");
   const imageShow = document.getElementById("image-show");
-  const closeImageShow = document.getElementById("close-image-show-button");
-
-  closeImageShow.addEventListener("click", () => {
-    imageShowModal.classList.remove("active");
-  });
 
   mainImage.addEventListener("click", () => {
     imageShowModal.classList.add("active");
     imageShow.src = mainImage.src;
   });
+
+  imageShow.addEventListener("click",()=>{
+    imageShowModal.classList.remove("active");
+  })
 
   const highlights = document.getElementById("details-highlights");
   highlights.innerHTML = "";
